@@ -1,2 +1,6 @@
-# sketchbook-earth
-Sketchbook Earth: Illustrated Climate Chronicles
+# Getting started
+
+```
+conda env create -f environment.yml
+```
+
