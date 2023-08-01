@@ -2,6 +2,7 @@
 *.nc
 *.zip
 *.gz
+*.txt
 
 # Ignore the Keys for the CDS and ADS
 KEYS.txt
