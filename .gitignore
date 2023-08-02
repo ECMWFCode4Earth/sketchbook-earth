@@ -1,9 +1,5 @@
-# Ignore large data files (e.g. netcdf files) and figures
+# Ignore large data files (e.g. netcdf files)
 *.nc
-*.grib
-*.grib.923a8.idx
-*.png
-!timeseries_daily.nc
 *.zip
 
 # Ignore the Keys for the CDS and ADS
