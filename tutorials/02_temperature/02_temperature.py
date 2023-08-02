@@ -20,6 +20,7 @@ import matplotlib.colors as mcolors
 from matplotlib.gridspec import GridSpec
 import matplotlib.dates as mdates
 import cartopy.crs as ccrs
+import cartopy.feature as cfeature
 from dask.diagnostics.progress import ProgressBar
 
 plt.style.use(
@@ -327,71 +328,394 @@ clim_temp_era5 = weighted_spatial_average(
 )
 
 with ProgressBar():
-    print(clim_temp_era5.mean().compute())
+    clim_temp_era5 = clim_temp_era5.compute()
+
+# Weithed temporal mean taking into account the number of days in each month over climatology period
+dim = clim_temp_era5.time.dt.days_in_month
+clim_temp_era5 = (clim_temp_era5 * dim).sum() / dim.sum()
+print(clim_temp_era5)
 # %%
 # ERA5 vs EOBS (observational data)
 # =============================================================================
 # %%
-# EOBS
+# Europe only
+with ProgressBar():
+    era5_europe = era5.sel(region_of_interest["Europe"]).compute()
+
+# %%
+# Get EOBS
 eobs_daily = xr.open_mfdataset("data/eobs/tg_ens_mean_0.25deg_reg_v27.0e.nc")
 eobs_daily = streamline_coords(eobs_daily)
-# %%
-# Europe only
-eobs_europe_daily = eobs_daily.sel(region_of_interest["Europe"])
-era5_europe = era5.sel(region_of_interest["Europe"])
 
 # %%
 # Figure 1. Annual European land surface air temperature anomalies for
 # 1950 to 2022, relative to the 1991–2020 reference period.
 # =============================================================================
+# Select the region of interest
+eobs_daily_europe = eobs_daily.sel(region_of_interest["Europe"])
 # Convert EOBS to monthly
-eobs_europe = eobs_europe_daily.resample(time="MS").mean("time")
-
+eobs_europe = eobs_daily_europe.resample(time="MS", skipna=False).mean("time")
 with ProgressBar():
     eobs_europe = eobs_europe.compute()
-    era5_europe = era5_europe.compute()
+
+# Calculate the monthly climatology
+eobs_monthly_climatology = (
+    eobs_europe["tg"].sel(clim_period).groupby("time.month").mean()
+)
+eobs_europe["anom"] = eobs_europe["tg"].groupby("time.month") - eobs_monthly_climatology
+eobs_europe["climatology"] = eobs_monthly_climatology
 
 
 # %%
+def convert_coords_time_to_year_month(ds):
+    """Convert the coordinates of a DataArray from "time" to ("year", "month")"""
+    year = ds.time.dt.year
+    month = ds.time.dt.month
+
+    # assign new coords
+    ds = ds.assign_coords(year=("time", year.data), month=("time", month.data))
+
+    # reshape the array to (..., "month", "year")
+    return ds.set_index(time=("year", "month")).unstack("time")
+
+
+def weighted_annual_average(da):
+    """Calculate the weighted annual average per year."""
+    days_in_month = da.time.dt.days_in_month
+    weights = (
+        days_in_month.groupby("time.year") / days_in_month.groupby("time.year").sum()
+    )
+    nominator = (da * weights).resample({"time": "AS"}).sum(skipna=False)
+    denominator = weights.resample({"time": "AS"}).sum()
+    np.testing.assert_allclose(denominator, 1)
+    return nominator / denominator
+
+
 # Calculate the monthly climatology
 def annual_anomalies(da, land_mask=None):
+    # 1. Calculate the spatial average
     da = weighted_spatial_average(da, region_of_interest["Europe"], land_mask)
-    climatology = da.sel(clim_period).groupby("time.month").mean("time")
-    anomalies = da.groupby("time.month") - climatology
-    return anomalies.groupby("time.year").mean("time")
+    # 2. Calculate the weighted (per days in month) annual average
+    waa = weighted_annual_average(da)
+    # 3. Convert the coordinates from "time" to ("year", "month")
+    return convert_coords_time_to_year_month(waa).sel(month=1, drop=True)
 
 
-eobs_europe_anom = annual_anomalies(eobs_europe["tg"], land_mask=None)
-era5_europe_anom = annual_anomalies(era5_europe["t2m"], land_mask=era5_europe["lsm"])
+eobs_europe_anom = annual_anomalies(eobs_europe["anom"], land_mask=None)
+era5_europe_anom = annual_anomalies(era5_europe["anom"], land_mask=era5_europe["lsm"])
+
+eobs_europe_anom.name = "EOBS"
+era5_europe_anom.name = "ERA5"
+
 
 # %%
-# make red and blue colors for above and below zero
-clrs_eobs = np.where(eobs_europe_anom > 0, "tab:red", "tab:blue")
-clrs_era5 = np.where(era5_europe_anom > 0, "darkred", "darkblue")
+def barplot_temperature(da1, da2):
+    # make red and blue colors for above and below zero
+    clrs = sns.color_palette("Paired", n_colors=6)
+    clrs_da1 = [clrs[0] if anom < 0 else clrs[4] for anom in da1.values]
+    clrs_da2 = [clrs[1] if anom < 0 else clrs[5] for anom in da2.values]
+
+    fig = plt.figure(figsize=(14, 5))
+    ax = fig.add_subplot(111)
+    ax.bar(
+        da1.year,
+        da1,
+        color=clrs_da1,
+        label=da1.name,
+        zorder=1,
+    )
+    ax.bar(
+        da2.year,
+        da2,
+        0.25,
+        color=clrs_da2,
+        label="ERA5",
+        zorder=2,
+    )
+    # Add a annoation for both datasets pointing to the last bar at the right hand side
+    # with text "ERA5" and "EOBS" respectively. The text should be in the same color as
+    # the bar.
+    da1_final_data = (da1[-1].year.item(), da1[-1].item())
+    da2_final_data = (da2[-1].year.item(), da2[-1].item())
+    ax.annotate(
+        da1.name,
+        xy=da2_final_data,
+        xytext=(2023, 1.4),
+        arrowprops=dict(arrowstyle="-|>", color=clrs[5]),
+        color=clrs[4],
+        ha="left",
+        xycoords="data",
+    )
+    ax.annotate(
+        da2.name,
+        xy=da1_final_data,
+        xytext=(2023, 0.3),
+        color=clrs[5],
+        arrowprops=dict(arrowstyle="-|>", color=clrs[4]),
+        ha="left",
+        xycoords="data",
+    )
+    ax.axhline(0, color=".5", lw=0.5, ls="--")
+    ax.set_title("European annual temperature anomalies (in ºC)")
+    sns.despine(ax=ax, offset=5, trim=True)
+    plt.show()
+
+
+barplot_temperature(eobs_europe_anom, era5_europe_anom)
+
+# %%
+diff = era5_europe_anom - eobs_europe_anom
+clrs_diff = np.where(diff > 0, "tab:red", "tab:blue")
 
 fig = plt.figure(figsize=(14, 5))
 ax = fig.add_subplot(111)
 ax.bar(
-    eobs_europe_anom.year,
-    eobs_europe_anom,
-    color=clrs_eobs,
-    label="EOBS",
-    alpha=0.5,
-)
-ax.bar(
-    era5_europe_anom.year,
-    era5_europe_anom,
-    0.5,
-    color=clrs_era5,
-    label="ERA5",
+    diff.year,
+    diff,
+    color=clrs_diff,
+    label="",
     alpha=0.5,
 )
 ax.axhline(0, color=".5", lw=0.5, ls="--")
-ax.legend(ncols=2, frameon=False, loc="upper center")
-ax.set_title("European annual temperature anomalies (in ºC)")
+ax.set_title("ERA5 tends to underestimate temperatures in Europe in the 50s and 60s")
+# Make a annotation pointing to (-.25, "1965") with text "ERA5 underestimates"
+ax.annotate(
+    "Cold bias in the 50s and 60s between ~0.1 and 0.3 ºC",
+    xy=(1966, -0.245),
+    xytext=(1977, -0.3),
+    # make a curved arrow
+    arrowprops=dict(
+        arrowstyle="-|>",
+        connectionstyle="angle3,angleA=0,angleB=-30",
+    ),
+    ha="left",
+    xycoords="data",
+)
+ax.set_ylabel("ERA5 - EOBS temperature anomaly (in ºC)")
+sns.despine(ax=ax, offset=5, trim=True)
+
 
 # %%
-# Correct climatolgoy!
-my_clim = era5_europe["t2m"].sel(clim_period).groupby("time.month").mean()
+# Figure 2. Average surface air temperature anomaly for 2022,
+# relative to the 1991–2020 reference period.
+# =============================================================================
 
+eobs_yearly_anoms = weighted_annual_average(eobs_europe["anom"])
+era5_yearly_anoms = weighted_annual_average(era5_europe["anom"])
+
+eobs_yearly_anoms = convert_coords_time_to_year_month(eobs_yearly_anoms).sel(month=1)
+era5_yearly_anoms = convert_coords_time_to_year_month(era5_yearly_anoms).sel(month=1)
+
+# %%
+YEAR = 2022
+
+
+def spatial_plot_temperature(da1, da2, year):
+    proj = ccrs.Orthographic(central_longitude=10, central_latitude=45)
+    fig = plt.figure(figsize=(14, 5))
+    gs = GridSpec(1, 3, figure=fig, width_ratios=[1, 1, 0.05], wspace=0.02)
+    ax1 = fig.add_subplot(gs[0, 0], projection=proj)
+    ax2 = fig.add_subplot(gs[0, 1], projection=proj)
+    cax = fig.add_subplot(gs[0, 2])
+    for ax in [ax1, ax2]:
+        ax.coastlines("50m", lw=0.5)
+        ax.add_feature(cfeature.OCEAN, facecolor=".6")
+        ax.add_feature(cfeature.LAND, facecolor=".8")
+        ax.set_extent([-25, 40, 34, 72], crs=ccrs.PlateCarree())
+
+    levels = np.arange(-3, 3.5, 0.5)
+    kwargs = dict(
+        levels=levels,
+        transform=ccrs.PlateCarree(),
+        cmap="RdYlBu_r",
+        cbar_kwargs=dict(label="Temperature anomaly (ºC)"),
+    )
+    da1.sel(year=year).plot(ax=ax1, cbar_ax=cax, **kwargs)
+    da2.sel(year=year).plot(ax=ax2, cbar_ax=cax, **kwargs)
+
+    da1_dist = da1.sel(year=year).stack(x=("lat", "lon")).dropna("x").values
+    da2_dist = da2.sel(year=year).stack(x=("lat", "lon")).dropna("x").values
+    cax.boxplot(
+        np.concatenate([da1_dist, da2_dist]),
+        vert=True,
+        positions=[0.5],
+        whis=(5, 95),
+        widths=0.5,
+        flierprops=dict(marker=".", markersize=1),
+    )
+    cax.set_xticks([])
+    ax1.set_title(f"{da1.name} ({year})")
+    ax2.set_title(f"{da2.name} ({year})")
+
+
+eobs_yearly_anoms.name = "EOBS"
+era5_yearly_anoms.name = "ERA5"
+spatial_plot_temperature(eobs_yearly_anoms, era5_yearly_anoms, YEAR)
+
+# %%
+
+diff = era5_yearly_anoms - eobs_yearly_anoms.interp_like(era5_yearly_anoms)
+
+proj = ccrs.Orthographic(central_longitude=10, central_latitude=45)
+levels = np.arange(-3, 3.5, 0.5)
+kwargs = dict(
+    levels=levels,
+    transform=ccrs.PlateCarree(),
+    cmap="RdYlBu_r",
+    cbar_kwargs=dict(label="Temperature anomaly (ºC)"),
+)
+fig = plt.figure(figsize=(7, 5))
+gs = GridSpec(1, 2, figure=fig, width_ratios=[1, 0.05], wspace=0.02)
+ax1 = fig.add_subplot(gs[0, 0], projection=proj)
+cax = fig.add_subplot(gs[0, 1])
+ax1.coastlines("50m", lw=0.5)
+ax1.add_feature(cfeature.OCEAN, facecolor=".6")
+ax1.add_feature(cfeature.LAND, facecolor=".8")
+ax1.set_extent([-25, 40, 34, 72], crs=ccrs.PlateCarree())
+diff.sel(year=YEAR).plot(ax=ax1, cbar_ax=cax, **kwargs)
+ax1.set_title(f"Difference between ERA5 - EOBS  ({YEAR})")
+dist = diff.sel(year=YEAR).stack(x=("lat", "lon")).dropna("x").values
+cax.boxplot(
+    dist,
+    vert=True,
+    positions=[0.5],
+    whis=(5, 95),
+    widths=0.5,
+    flierprops=dict(marker=".", markersize=1),
+)
+plt.show()
+
+
+# %%
+# Figure 3a. European land surface air temperature anomalies
+# for SEASONS, relative to the average for the 1991–2020 reference period.
+# -----------------------------------------------------------------------------
+def weighted_seasonal_average(ds):
+    """Calculate the weighted seasonal average per year and grid point.
+
+    Important: in case there are missing values in the data the weighted average will be wrong.
+    """
+    month_length = ds.time.dt.days_in_month
+    ds_weighted_sum = (ds * month_length).resample(time="QS-DEC").sum(skipna=False)
+    sum_of_weights = month_length.resample(time="QS-DEC").sum()
+    return ds_weighted_sum / sum_of_weights
+
+
+def convert_time_to_year_season(ds):
+    """Convert the coordinates of a DataArray from "time" to ("year", "season")"""
+    year = ds.time.dt.year
+    season = ds.time.dt.season
+
+    # assign new coords
+    ds = ds.assign_coords(year=("time", year.data), season=("time", season.data))
+
+    # reshape the array to (..., "season", "year")
+    return ds.set_index(time=("year", "season")).unstack("time")
+
+
+eobs_seasonal = weighted_seasonal_average(eobs_europe)
+era5_seasonal = weighted_seasonal_average(era5_europe)
+
+eobs_seasonal.coords.update({"time": eobs_seasonal.time + pd.Timedelta(days=31)})
+era5_seasonal.coords.update({"time": era5_seasonal.time + pd.Timedelta(days=31)})
+
+eobs_seasonal = convert_time_to_year_season(eobs_seasonal)
+era5_seasonal = convert_time_to_year_season(era5_seasonal)
+
+eobs_seasonal.loc[dict(season="DJF", year=[1950, 2023])] = np.nan
+era5_seasonal.loc[dict(season="DJF", year=[1950, 2023])] = np.nan
+
+# %%
+.sel(season="DJF")
+eobs_seasonal_average = weighted_spatial_average(
+    eobs_seasonal["anom"], region_of_interest["Europe"]
+)
+era5_seasonal_average = weighted_spatial_average(
+    era5_seasonal["anom"], region_of_interest["Europe"], land_mask=era5_seasonal["lsm"]
+)
+
+# %%
+eobs_seasonal_average.name = "EOBS"
+era5_seasonal_average.name = "ERA5"
+
+SEASON = "SON"
+barplot_temperature(
+    eobs_seasonal_average.sel(season=SEASON, drop=True),
+    era5_seasonal_average.sel(season=SEASON, drop=True),
+)
+
+# %%
+# Figure 4b. Surface air temperature anomalies for winter, spring, summer
+# and autumn 2022, relative to the respective seasonal average for the
+# 1991–2020 reference period.
+# -----------------------------------------------------------------------------
+eobs_seasonal_anom = eobs_seasonal["anom"].sel(season=SEASON)
+era5_seasonal_anom = era5_seasonal["anom"].sel(season=SEASON)
+
+eobs_seasonal_anom.name = "EOBS"
+era5_seasonal_anom.name = "ERA5"
+
+spatial_plot_temperature(
+    eobs_seasonal_anom,
+    era5_seasonal_anom,
+    YEAR,
+)
+
+
+
+# %%
+# Figure 5. Average surface air temperature anomalies for each month 
+# of 2022, relative to the respective monthly average for the 1991–2020 
+# reference period. Data source: ERA5. Credit: C3S/ECMWF.
+# -----------------------------------------------------------------------------
+
+month_names = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December",
+}
+
+
+def plot_monthly_overview(da, title, **kwargs):
+    da = convert_coords_time_to_year_month(da)
+    fig = plt.figure(figsize=(10, 10))
+    gs = GridSpec(4, 4, figure=fig, wspace=0.02, hspace=0.02, width_ratios=[1, 1, 1, .05])
+    axes = [fig.add_subplot(gs[i//3, i%3], projection=proj) for i in range(12)]
+    cax = fig.add_subplot(gs[:, 3])
+
+    for ax, month in zip(axes, da.month.values):
+        da.sel(month=month).plot(ax=ax, cbar_ax=cax, **kwargs)
+        ax.set_title('')
+        ax.coastlines('50m', lw=0.5)
+        ax.add_feature(cfeature.OCEAN, facecolor='.6')
+        ax.add_feature(cfeature.LAND, facecolor='.8')
+        ax.text(
+            0.02, 0.98, month_names[month], transform=ax.transAxes, 
+            ha='left', va='top', fontsize=12,
+            bbox=dict(facecolor='w', edgecolor='w', boxstyle='round', alpha=0.8)
+        )
+        
+        
+
+    fig.suptitle(title, y=.91)
+
+
+title = 'Monthly surface air temperature anomalies in 2022 (in ºC)'
+kwargs.update({'levels': np.arange(-6, 6.5, 1.), 'vmin':-6, 'vmax':6})
+plot_monthly_overview(era5_europe['anom'].sel(time='2022'), title, **kwargs)
+
+# %%
+monthly_diffs = era5_europe['anom'].sel(time='2022') - eobs_europe['anom'].sel(time='2022').interp_like(era5_europe['anom'])
+title = 'Differences between ERA5 and EOBS in 2022 (in ºC)'
+kwargs.update({'levels': np.arange(-6, 6.1, 1.), 'vmin':-6, 'vmax':6})
+plot_monthly_overview(monthly_diffs, title, **kwargs)
 # %%
