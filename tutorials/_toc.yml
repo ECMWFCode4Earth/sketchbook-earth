@@ -4,16 +4,16 @@
 format: jb-book
 root: intro
 parts:
- - caption: 1 | Greenhouse Gases - The Prime Suspect
+ - caption: "1 | Greenhouse Gases - The Prime Suspect"
    chapters:
    - file: 01_greenhouse_gases/01_greenhouse_gases
      title: "Long-Term Development of CO2 and CH4 Concentrations"
 
-- caption: 2 | Taking Earth's Temperature
+- caption: "2 | Taking Earth's Temperature"
    - file: 02_temperature/02_temperature.ipynb
      title: "It's getting hot(ter) in here"
 
-- caption: 3 | Journey to the Frozen Sea
+- caption: "3 | Journey to the Frozen Sea"
    - file: 03_sea_ice/03_sea_ice.ipynb
      title: "Tracking Changes in Sea Ice"
   #  - file: 04_sea_level.ipynb
