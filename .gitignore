@@ -1,6 +1,9 @@
 # Ignore large data files (e.g. netcdf files)
 *.nc
 *.zip
+*.gz
+*.txt
+
 
 # Ignore the Keys for the CDS and ADS
 KEYS.txt
