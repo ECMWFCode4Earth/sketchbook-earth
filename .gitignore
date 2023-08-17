@@ -2,7 +2,7 @@
 *.nc
 *.zip
 *.gz
-*.txt
+tutorials/**/*.txt
 
 # Ignore some temporary files
 README2.md
