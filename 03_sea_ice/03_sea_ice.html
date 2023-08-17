@@ -155,9 +155,16 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../01_greenhouse_gases/01_greenhouse_gases.html">Chapter 1: Greenhouse Gases - The prime suspect</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_temperature/02_temperature.html">Chapter 2: It's getting hot(ter) in here</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">1 | Greenhouse Gases - The Prime Suspect</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_greenhouse_gases/01_greenhouse_gases.html">Long-Term Development of CO2 and CH4 Concentrations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2 | Taking Earth's Temperature</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02_temperature/02_temperature.html">It's getting hot(ter) in here</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3 | Journey to the Frozen Sea</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 3: Journey to the Frozen Sea</a></li>
 
 
@@ -355,14 +362,17 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 3: Journey to the Frozen Sea</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-edge-and-type">Sea Ice Edge and Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-in-global-sea-ice">Tracking Changes in Global Sea Ice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-edge-and-type">Sea Ice Edge and Type</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Sea ice concentration</a></li>
@@ -381,19 +391,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-3-journey-to-the-frozen-sea">
 <h1>Chapter 3: Journey to the Frozen Sea<a class="headerlink" href="#chapter-3-journey-to-the-frozen-sea" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Tracking Changes in Sea Ice</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="tracking-changes-in-global-sea-ice">
+<h2>Tracking Changes in Global Sea Ice<a class="headerlink" href="#tracking-changes-in-global-sea-ice" title="Permalink to this heading">#</a></h2>
 <section id="objective">
-<h2>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h2>
+<h3>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h3>
 <p>Reproduce figures from the C3S Climate Intelligence reports about sea ice. Specifically, we will reproduce figures from Sea ice section of the the <a class="reference external" href="https://climate.copernicus.eu/climate-bulletins">Monthly Climate Bulletins</a> and <a class="reference external" href="https://climate.copernicus.eu/climate-indicators/sea-ice">Climate Indicators</a>.</p>
 </section>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h3>
 <p>EUMETSAT is the European Organisation for the Exploitation of Meteorological Satellites. It’s a global operational satellite agency at the heart of Europe that provides data, products, and support to a wide range of users in Europe and across the world.</p>
 <p>The OSI SAF, or Ocean and Sea Ice Satellite Application Facility, is one of the specialized Satellite Application Facilities (SAFs) under EUMETSAT. The SAFs are dedicated centers of excellence for processing satellite data, and they focus on various thematic areas. OSI SAF, as its name suggests, concentrates on delivering operational products and services related to ocean and <a class="reference external" href="https://osi-saf.eumetsat.int/products/sea-ice-products">sea ice</a>.</p>
 <p>In this tutorial we will work with different characteristics of global sea ice, specifically we will look at</p>
@@ -406,7 +411,7 @@ document.write(`
 <p>All datasets are provided by the <a class="reference external" href="https://thredds.met.no/thredds/osisaf/osisaf.html">MET Norway Thredds Service</a> of the Norwegian Meteorological Institute. This allow the user to download specific files directly using <code class="docutils literal notranslate"><span class="pre">xarray</span></code>. A selection of OSI SAF datasets are also made available through the Copernicus Climate Data and Marine Data Stores. In our case, we will access the data through the CDS when available and fallback to the MET Norway Thredds Service whenever the data is not available, which is only the case for the Sea Ice Index.</p>
 </section>
 <section id="definitions">
-<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h2>
+<h3>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading">#</a></h3>
 <p>taken from <a class="reference external" href="https://osisaf-hl.met.no/v2p2-sea-ice-index">OSI SAF website</a></p>
 <ul class="simple">
 <li><p>Sea Ice Extent (SIE) is defined as the area covered by a significant amount of sea ice, that is the area of ocean covered with more than 15% Sea Ice Concentration (SIC).</p></li>
@@ -416,7 +421,7 @@ document.write(`
 <p>At hemispherical scales, SIE is often reported with units of 10^6 sq km (millions square kilometers).</p>
 </section>
 <section id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">#</a></h2>
+<h3>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">#</a></h3>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> EUMETSAT OSI SAF Global Sea Ice Concentration CDR v3.0 (OSI-450-a): <a class="reference external" href="https://osi-saf.eumetsat.int/products/osi-430-a">Data and Documentation</a></p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> EUMETSAT OSI SAF Global Sea Ice Concentration ICDR v3.0 (OSI-430-a): <a class="reference external" href="https://osi-saf.eumetsat.int/products/osi-450-a">Data and Documentation</a></p></li>
@@ -464,7 +469,7 @@ document.write(`
 </div>
 </section>
 <section id="downloading-the-data">
-<h2>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this heading">#</a></h2>
+<h3>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path_to</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># dictionary containing [&lt;variable&gt; : &lt;target folder&gt;]</span>
@@ -491,7 +496,7 @@ sea_ice_type    --&gt; data/type/
 </div>
 </section>
 <section id="sea-ice-extent">
-<h2>Sea Ice Extent<a class="headerlink" href="#sea-ice-extent" title="Permalink to this heading">#</a></h2>
+<h3>Sea Ice Extent<a class="headerlink" href="#sea-ice-extent" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://osi-saf.eumetsat.int/products/osi-420">Reference website</a></p>
 <p>Daily sea ice extent (SIE) is available through the EUMETSAT OSI SAF Sea Ice Index v2.2 product, which containt sea ice extent and area.
 Download daily index of sea ice extent (SIE) <a class="reference external" href="https://thredds.met.no/thredds/osisaf/osisaf_seaiceindex.html">here</a>:</p>
@@ -1866,7 +1871,7 @@ Data variables:
 </div>
 </section>
 <section id="sea-ice-concentration">
-<h2>Sea Ice Concentration<a class="headerlink" href="#sea-ice-concentration" title="Permalink to this heading">#</a></h2>
+<h3>Sea Ice Concentration<a class="headerlink" href="#sea-ice-concentration" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-sea-ice-concentration?tab=overview">CDS Data Access</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2359,7 +2364,7 @@ Attributes:
     As of time of writing, the Climate Data Store provides access to version 2 of the dataset and not the most recent version 3. If you need version 3, please consider downloading directly from <a href="https://osi-saf.eumetsat.int/products/osi-430-a">EUMETSAT OSI SAF official webpage</a>.
 </div></section>
 <section id="sea-ice-edge-and-type">
-<h2>Sea Ice Edge and Type<a class="headerlink" href="#sea-ice-edge-and-type" title="Permalink to this heading">#</a></h2>
+<h3>Sea Ice Edge and Type<a class="headerlink" href="#sea-ice-edge-and-type" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/satellite-sea-ice-edge-type?tab=overview">CDS Data Access</a></p>
 <div class="alert alert-block alert-info">
 <b>NOTE</b>: <br>
@@ -3060,6 +3065,7 @@ Attributes: (12/33)
 <img alt="../_images/2c8f2e422e413fa16fc2bcc23497207df8edd1020378d76eb1511a73b69b7a6e.png" src="../_images/2c8f2e422e413fa16fc2bcc23497207df8edd1020378d76eb1511a73b69b7a6e.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
@@ -4417,14 +4423,17 @@ Attributes:
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 3: Journey to the Frozen Sea</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-edge-and-type">Sea Ice Edge and Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-in-global-sea-ice">Tracking Changes in Global Sea Ice</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-edge-and-type">Sea Ice Edge and Type</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Sea ice concentration</a></li>
