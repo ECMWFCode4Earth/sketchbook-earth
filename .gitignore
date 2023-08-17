@@ -1,6 +1,7 @@
 # Ignore large data files (e.g. netcdf files)
 *.nc
 *.zip
+*.tar.gz
 *.gz
 tutorials/**/*.txt
 
