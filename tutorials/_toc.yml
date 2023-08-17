@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
- - caption: "1 | Greenhouse Gases - The Prime Suspect"
+- caption: "1 | Greenhouse Gases - The Prime Suspect"
    chapters:
    - file: 01_greenhouse_gases/01_greenhouse_gases
      title: "Long-Term Development of CO2 and CH4 Concentrations"
