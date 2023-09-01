@@ -3,25 +3,27 @@ channels:
   - conda-forge
 dependencies:
   - python=3.10
-  - scipy
   - xarray
   - dask
-  - bottleneck
   - netcdf4
-  - cfgrib
-  - xeofs
+  - bottleneck
   - matplotlib
   - regionmask
   - cartopy
   - seaborn
-  - matplotx
-  - plotly
+  - scipy
   - cmocean
   - ipykernel
   - ca-certificates
   - certifi
   - openssl
+  - matplotx
+  - cfgrib
   - pip
+  - plotly
+  - xeofs
+  - nbconvert
+  - ipywidgets
   - pip:
       - antlr4-python3-runtime==4.7.2
       - cacholote==0.3.1
