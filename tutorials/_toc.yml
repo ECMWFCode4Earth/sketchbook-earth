@@ -1,0 +1,26 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: "1 | Greenhouse Gases - The Prime Suspect"
+  chapters:
+  - file: 01_greenhouse_gases/01_greenhouse_gases
+    title: "Long-Term Development of CO2 and CH4 Concentrations"
+
+- caption: "2 | Taking Earth's Temperature"
+  chapters:
+  - file: 02_temperature/02_temperature.ipynb
+    title: "It's getting hot(ter) in here"
+
+- caption: "3 | Journey to the Frozen Sea"
+  chapters:
+  - file: 03_sea_ice/03_sea_ice.ipynb
+    title: "Tracking Changes in Sea Ice"
+  #  - file: 04_sea_level.ipynb
+  #    title: "Chapter 4: Rising seas"
+  #  - file: 05_animations.ipynb
+  #    title: "Chapter 5: Ta panta rhei... (everything flows)"
+    #   - file: 06_greenhouse_gases
+    #     title: Connecting the dots
