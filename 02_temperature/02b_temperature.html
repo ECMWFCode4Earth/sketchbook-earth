@@ -1,0 +1,2252 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 2: Taking Earth’s Temperature &#8212; Sketchbook Earth &#34;:&#34; Illustrated Climate Chronicles</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_temperature/02b_temperature';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 2: Taking Earth’s Temperature" href="02c_temperature.html" />
+    <link rel="prev" title="Chapter 2: Taking Earth’s Temperature" href="02a_temperature.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_transparent.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo_transparent.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Sketchbook Earth: Illustrated Climate Chronicles
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">1 | Greenhouse Gases - The Prime Suspect</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../01_greenhouse_gases/01_greenhouse_gases.html">Long-Term Development of CO2 and CH4 Concentrations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">2 | Taking Earth's Temperature</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="02a_temperature.html">Part I</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Part II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02c_temperature.html">Part III</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">3 | Journey to the Frozen Sea</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../03_sea_ice/03_sea_ice.html">Chapter 3: Journey to the Frozen Sea</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ECMWFCode4Earth/sketchbook-earth" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ECMWFCode4Earth/sketchbook-earth/issues/new?title=Issue%20on%20page%20%2F02_temperature/02b_temperature.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/02_temperature/02b_temperature.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapter 2: Taking Earth’s Temperature</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-comparing-re-analysis-with-observations-since-1950-a-class-anchor-id-chapter-one-a">PART II: Comparing Re-analysis with Observations since 1950 <a class="anchor" id="chapter-one"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-set-up">Getting Set Up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#era5">ERA5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-obs">E-OBS</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-anomalies">Annual Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonal-anomalies">Seasonal Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monthly-anomalies">Monthly Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-anomalies">Daily Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-taking-earth-s-temperature">
+<h1>Chapter 2: Taking Earth’s Temperature<a class="headerlink" href="#chapter-2-taking-earth-s-temperature" title="Permalink to this heading">#</a></h1>
+<section id="part-ii-comparing-re-analysis-with-observations-since-1950-a-class-anchor-id-chapter-one-a">
+<h2>PART II: Comparing Re-analysis with Observations since 1950 <a class="anchor" id="chapter-one"></a><a class="headerlink" href="#part-ii-comparing-re-analysis-with-observations-since-1950-a-class-anchor-id-chapter-one-a" title="Permalink to this heading">#</a></h2>
+<p>This tutorial is Part II of the trilogy “Taking Earth’s Temperature”:</p>
+<ol class="arabic simple">
+<li><p><strong>Long-Term Development</strong> of Global Earth Temperature Since 1850</p></li>
+<li><p><strong>Comparing Re-analysis with Observations since 1950</strong>  (<span class="xref myst">this notebook</span>)</p></li>
+<li><p><strong>Visualising Recent Temperature Anomalies</strong></p></li>
+</ol>
+<p>In the first part of this scientific journey, we unlocked the secrets of surface temperatures since 1850. We explored various datasets, learning how to decode them, and laid the groundwork for what comes next.</p>
+<div class="alert alert-block alert-success">
+<b>Objective</b> <br>
+    In this second act, we'll delve into a side-by-side analysis of <b>ERA5 re-analysis</b> and modern observation data in Europe. Imagine this as zooming into a detailed map from a bird's eye view, starting with annual anomalies, then diving into seasonal, monthly, and even daily variations. It's like piecing together a puzzle to reveal the full picture of the European climate.
+ </a>
+</div><p>Our journey will be guided by two datasets:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels-monthly-means?tab=overview">ERA5</a>: A global data set that provides hourly estimates of a large number of atmospheric, land and oceanic parameters, including temperature and humidity.</p></li>
+<li><p><a class="reference external" href="https://www.ecad.eu/download/ensembles/download.php">E-OBS</a>: A dataset that provides a daily gridded observational dataset for precipitation, temperature, and sea level pressure in Europe.</p></li>
+</ol>
+<p><em>Note that we use the monthly averaged data for ERA5.</em></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head text-center"><p>Spatial Coverage</p></th>
+<th class="head text-center"><p>Spatial Resolution</p></th>
+<th class="head text-center"><p>Temporal Coverage</p></th>
+<th class="head text-center"><p>Temporal resolution</p></th>
+<th class="head text-center"><p>Provider</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>E-OBS</p></td>
+<td class="text-center"><p>Europe</p></td>
+<td class="text-center"><p>0.10º x 0.10º</p></td>
+<td class="text-center"><p>1950 - today</p></td>
+<td class="text-center"><p>Daily</p></td>
+<td class="text-center"><p>ECA&amp;D</p></td>
+</tr>
+<tr class="row-odd"><td><p>ERA5</p></td>
+<td class="text-center"><p>Global</p></td>
+<td class="text-center"><p>0.25º x 0.25º</p></td>
+<td class="text-center"><p>1940 - today</p></td>
+<td class="text-center"><p>Monthly</p></td>
+<td class="text-center"><p>C3S/ECMWF</p></td>
+</tr>
+</tbody>
+</table>
+<p>Get ready to put on your data scientist’s hat as we build on methods from the first part to form spatial and temporal averages. Along the way, we’ll create vivid visualizations, bringing data to life and making sense of what it tells us. By the end of this chapter, we’ll be able to compute daily anomalies within a year, forming a crucial piece of this year’s European State of the Climate report (<a class="reference external" href="https://climate.copernicus.eu/esotc/2022/temperature">ESOTC 2022</a>).</p>
+<style>
+td, th {
+   border: 1px solid white;
+   border-collapse: collapse;
+}
+</style>
+<table align="left">
+  <tr>
+    <th>Run the tutorial via free cloud platforms: </th>
+    <!-- <th><a href="https://mybinder.org/v2/gh/ecmwf-projects/copernicus-training-c3s/main?labpath=reanalysis-climatology.ipynb">
+        <img src = "https://mybinder.org/badge.svg" alt = "Binder"></th> -->
+    <th><a href="https://kaggle.com/kernels/welcome?src=https://github.com/ECMWFCode4Earth/sketchbook-earth/blob/main/tutorials/02_temperature/02b_temperature.ipynb">
+        <img src = "https://kaggle.com/static/images/open-in-kaggle.svg" alt = "Kaggle"></th>
+    <th><a href="https://colab.research.google.com/github/ECMWFCode4Earth/sketchbook-earth/blob/main/tutorials/02_temperature/02b_temperature.ipynb">
+        <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
+  </tr>
+</table><hr class="docutils" />
+<section id="getting-set-up">
+<h3>Getting Set Up<a class="headerlink" href="#getting-set-up" title="Permalink to this heading">#</a></h3>
+<p>We begin by importing all necessary packages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python Standard Libraries</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">calendar</span>
+<span class="kn">import</span> <span class="nn">tarfile</span>
+
+<span class="c1"># Data Manipulation Libraries</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">dask</span>
+
+<span class="c1"># Visualization Libraries</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">import</span> <span class="n">GridSpec</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<span class="kn">from</span> <span class="nn">dask.diagnostics.progress</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
+
+<span class="c1"># Climate Data Store API for retrieving climate data</span>
+<span class="kn">import</span> <span class="nn">cdsapi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following cell ensures a consistent figure layout. If this notebook is run on one of the cloud platforms, the stylesheet will not be present by default. Either load the file into the Cloud Server additionally, or ignore the following cell. It will have no effect on the calculation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s2">&quot;../copernicus.mplstyle&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Additionally, we instruct dask to avoid creating large chunks, which can occur during various calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dask</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s2">&quot;array.slicing.split_large_chunks&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dask.config.set at 0x7f9ecef287c0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the following cells, we define global parameters that we will continually refer to. Depending on interest, these can be adjusted as desired. Firstly, we define the <code class="docutils literal notranslate"><span class="pre">REGIONS</span></code> we are interested in, in our case, Europe. Note we followed the definition used in the <a class="reference external" href="https://climate.copernicus.eu/esotc/2022/about-data#Regiondefinitions">C3S Climate Intelligence reports</a>, however, feel free to change it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">REGIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Europe&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="mi">72</span><span class="p">)}}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also define the necessary projections, which we need for visualising spatial data. The data each lie on a regular longitude-latitude grid, so we choose <code class="docutils literal notranslate"><span class="pre">PlateCarree</span></code>. For Europe, we select the <code class="docutils literal notranslate"><span class="pre">TransverseMercator</span></code> projection, a method that provides less distortion in mapping the region, due to its alignment with meridians (more on projections and using <code class="docutils literal notranslate"><span class="pre">cartopy</span></code> in Part III).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PROJS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Europe&quot;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">TransverseMercator</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="mi">52</span><span class="p">),</span>
+    <span class="s2">&quot;Data&quot;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we choose the reference period for calculating the climatology. We use the currently updated period from 1991-2020.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">REF_PERIOD</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="nb">slice</span><span class="p">(</span><span class="s2">&quot;1991&quot;</span><span class="p">,</span> <span class="s2">&quot;2020&quot;</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since we tap into two different data sources, both coming in their unique formats and peculiarities, let’s organise the data into folders for a better overview. If these do not exist, they will be created.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_name</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># dictionary containing [data source : file name]</span>
+
+<span class="n">file_name</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;era5&quot;</span><span class="p">:</span> <span class="s2">&quot;temperature_era5.nc&quot;</span><span class="p">})</span>
+<span class="n">file_name</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;eobs&quot;</span><span class="p">:</span> <span class="s2">&quot;temperature_eobs.tar.gz&quot;</span><span class="p">})</span>
+
+<span class="c1"># Create the paths to the files</span>
+<span class="n">path_to</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">source</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data/</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_name</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1"># Create necessary directories if they do not exist</span>
+<span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">path_to</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>  <span class="c1"># create the folder if not available</span>
+
+<span class="n">path_to</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;era5&#39;: &#39;data/era5/temperature_era5.nc&#39;,
+ &#39;eobs&#39;: &#39;data/eobs/temperature_eobs.tar.gz&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we will see, the different data come with varying conventions regarding dimension names and coordinates. We’ll make our work much easier if we ensure from the outset that all data are in the same format. This means, in our case, we want to streamline datasets in the following way:</p>
+<ul class="simple">
+<li><p>Dimension names are (<code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>)</p></li>
+<li><p>(Only for monthly resolved <code class="docutils literal notranslate"><span class="pre">time</span></code> coordinate): <code class="docutils literal notranslate"><span class="pre">time</span></code> coordinate is in <code class="docutils literal notranslate"><span class="pre">datetime</span></code> format and fixed at the beginning of the month</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">lon</span></code> and <code class="docutils literal notranslate"><span class="pre">lat</span></code> coordinates are sorted by size</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">lon</span></code> coordinate is defined from -180 to +180 º (as opposed to 0 to 360º)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">coordinate_is_monthly</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return True if the coordinates are months&quot;&quot;&quot;</span>
+    <span class="n">time_diffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="n">time_diffs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="n">time_diffs</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+
+    <span class="c1"># If all differences are between 28 and 31 days</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">((</span><span class="mi">28</span> <span class="o">&lt;=</span> <span class="n">time_diffs</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_diffs</span> <span class="o">&lt;=</span> <span class="mi">31</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">streamline_coords</span><span class="p">(</span><span class="n">da</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Streamline the coordinates of a DataArray.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    da : xr.DataArray</span>
+<span class="sd">        The DataArray to streamline.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Ensure that time coordinate is fixed to the first day of the month</span>
+    <span class="k">if</span> <span class="s2">&quot;time&quot;</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">coordinate_is_monthly</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">):</span>
+            <span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_index</span><span class="p">()</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s2">&quot;M&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_timestamp</span><span class="p">()</span>
+
+    <span class="c1"># Ensure that spatial coordinates are called &#39;lon&#39; and &#39;lat&#39;</span>
+    <span class="k">if</span> <span class="s2">&quot;longitude&quot;</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
+        <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="s2">&quot;lon&quot;</span><span class="p">})</span>
+    <span class="k">if</span> <span class="s2">&quot;latitude&quot;</span> <span class="ow">in</span> <span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
+        <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="s2">&quot;lat&quot;</span><span class="p">})</span>
+
+    <span class="c1"># Ensure that lon/lat are sorted in ascending order</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">)</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Ensure that lon is in the range [-180, 180]</span>
+    <span class="n">lon_min</span> <span class="o">=</span> <span class="n">da</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">lon_max</span> <span class="o">=</span> <span class="n">da</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">lon_min</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">180</span> <span class="ow">or</span> <span class="n">lon_max</span> <span class="o">&gt;</span> <span class="mi">180</span><span class="p">:</span>
+        <span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">da</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">180</span><span class="p">)</span> <span class="o">%</span> <span class="mi">360</span> <span class="o">-</span> <span class="mi">180</span>
+        <span class="n">da</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">sortby</span><span class="p">(</span><span class="n">da</span><span class="o">.</span><span class="n">lon</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">da</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="downloading-the-data">
+<h3>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this heading">#</a></h3>
+<p>We are now ready to download the various data.</p>
+<section id="era5">
+<h4>ERA5<a class="headerlink" href="#era5" title="Permalink to this heading">#</a></h4>
+<p>Now, we load ERA5 from the <a class="reference external" href="https://doi.org/10.24381/cds.f17050d7">Climate Data Store (CDS)</a> using the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code>, including the land-sea mask. To access the CDS programatically, we’ll have to provide our CDS API key.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">URL</span> <span class="o">=</span> <span class="s1">&#39;https://cds.climate.copernicus.eu/api/v2&#39;</span>
+<span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;##################################&#39;</span> <span class="c1"># add your key here the format should be as {uid}:{api-key}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info">
+<b>New to CDS?</b> Consider the <a href="https://ecmwf-projects.github.io/copernicus-training-c3s/cds-tutorial.html">CDS tutorial</a> for a detailed guide.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+  <span class="s1">&#39;reanalysis-era5-single-levels-monthly-means&#39;</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;product_type&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly_averaged_reanalysis&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2m_temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;land_sea_mask&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1950</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)),</span>
+    <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)),</span>
+    <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;00:00&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="n">path_to</span><span class="p">[</span><span class="s1">&#39;era5&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>After opening and streamlining the ERA5 data, we will perform the following operations:</p>
+<ol class="arabic simple">
+<li><p>Focusing on Europe</p></li>
+<li><p>Converting temperatures from Kelvin to Celsius</p></li>
+<li><p>Calculating the monthly climatology</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">path_to</span><span class="p">[</span><span class="s2">&quot;era5&quot;</span><span class="p">])</span> <span class="k">as</span> <span class="n">era5</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="c1"># Streamline coordinates</span>
+<span class="n">era5</span> <span class="o">=</span> <span class="n">streamline_coords</span><span class="p">(</span><span class="n">era5</span><span class="p">)</span>
+
+<span class="c1"># Focus on Europe</span>
+<span class="n">era5</span> <span class="o">=</span> <span class="n">era5</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REGIONS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+
+<span class="c1"># Convert temperature from Kelvin to Celsius</span>
+<span class="n">era5</span><span class="p">[</span><span class="s2">&quot;t2m&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">era5</span><span class="p">[</span><span class="s2">&quot;t2m&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">273.15</span>
+
+<span class="c1"># Compute monthly climatology</span>
+<span class="n">era5_monthly_climatology</span> <span class="o">=</span> <span class="n">era5</span><span class="p">[</span><span class="s2">&quot;t2m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REF_PERIOD</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">era5</span><span class="p">[</span><span class="s2">&quot;t2m&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">era5_monthly_climatology</span>
+
+<span class="c1"># Europe only</span>
+<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">():</span>
+    <span class="n">era5</span> <span class="o">=</span> <span class="n">era5</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+
+<span class="n">era5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nrieger/miniconda3/envs/tutorial/lib/python3.10/site-packages/xarray/core/indexing.py:1440: PerformanceWarning: Slicing with an out-of-order index is generating 73 times more chunks
+  return self.array[key]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[########################################] | 100% Completed | 126.65 s
+</pre></div>
+</div>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:  (lon: 261, lat: 153, time: 876)
+Coordinates:
+  * lon      (lon) float32 -25.0 -24.75 -24.5 -24.25 ... 39.25 39.5 39.75 40.0
+  * lat      (lat) float32 34.0 34.25 34.5 34.75 35.0 ... 71.25 71.5 71.75 72.0
+  * time     (time) datetime64[ns] 1950-01-01 1950-02-01 ... 2022-12-01
+    month    (time) int64 1 2 3 4 5 6 7 8 9 10 11 ... 2 3 4 5 6 7 8 9 10 11 12
+Data variables:
+    t2m      (time, lat, lon) float32 16.74 16.72 16.68 ... 0.116 0.1178 0.1051
+    lsm      (time, lat, lon) float32 0.0 0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0
+    anom     (time, lat, lon) float32 -0.7348 -0.7398 -0.7562 ... 1.13 1.138
+Attributes:
+    Conventions:  CF-1.6
+    history:      2023-07-18 21:45:16 GMT by grib_to_netcdf-2.25.1: /opt/ecmw...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-0bbeddff-af10-40fc-851c-00fd2f3a4f1d' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-0bbeddff-af10-40fc-851c-00fd2f3a4f1d' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>lon</span>: 261</li><li><span class='xr-has-index'>lat</span>: 153</li><li><span class='xr-has-index'>time</span>: 876</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-618290e1-906a-48a5-8a3f-79aae26d5521' class='xr-section-summary-in' type='checkbox'  checked><label for='section-618290e1-906a-48a5-8a3f-79aae26d5521' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-25.0 -24.75 -24.5 ... 39.75 40.0</div><input id='attrs-1df015f2-4b7c-4751-bb3f-c937a807d518' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-1df015f2-4b7c-4751-bb3f-c937a807d518' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7eb6ebea-671b-4b9b-9f0f-4ade75ec4f7c' class='xr-var-data-in' type='checkbox'><label for='data-7eb6ebea-671b-4b9b-9f0f-4ade75ec4f7c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-25.  , -24.75, -24.5 , ...,  39.5 ,  39.75,  40.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>34.0 34.25 34.5 ... 71.5 71.75 72.0</div><input id='attrs-5a7351c8-b271-4a11-8fcd-036acbb893c4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5a7351c8-b271-4a11-8fcd-036acbb893c4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-05ec34a3-b7be-4fb0-b781-4bbfcfda0547' class='xr-var-data-in' type='checkbox'><label for='data-05ec34a3-b7be-4fb0-b781-4bbfcfda0547' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>long_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([34.  , 34.25, 34.5 , 34.75, 35.  , 35.25, 35.5 , 35.75, 36.  , 36.25,
+       36.5 , 36.75, 37.  , 37.25, 37.5 , 37.75, 38.  , 38.25, 38.5 , 38.75,
+       39.  , 39.25, 39.5 , 39.75, 40.  , 40.25, 40.5 , 40.75, 41.  , 41.25,
+       41.5 , 41.75, 42.  , 42.25, 42.5 , 42.75, 43.  , 43.25, 43.5 , 43.75,
+       44.  , 44.25, 44.5 , 44.75, 45.  , 45.25, 45.5 , 45.75, 46.  , 46.25,
+       46.5 , 46.75, 47.  , 47.25, 47.5 , 47.75, 48.  , 48.25, 48.5 , 48.75,
+       49.  , 49.25, 49.5 , 49.75, 50.  , 50.25, 50.5 , 50.75, 51.  , 51.25,
+       51.5 , 51.75, 52.  , 52.25, 52.5 , 52.75, 53.  , 53.25, 53.5 , 53.75,
+       54.  , 54.25, 54.5 , 54.75, 55.  , 55.25, 55.5 , 55.75, 56.  , 56.25,
+       56.5 , 56.75, 57.  , 57.25, 57.5 , 57.75, 58.  , 58.25, 58.5 , 58.75,
+       59.  , 59.25, 59.5 , 59.75, 60.  , 60.25, 60.5 , 60.75, 61.  , 61.25,
+       61.5 , 61.75, 62.  , 62.25, 62.5 , 62.75, 63.  , 63.25, 63.5 , 63.75,
+       64.  , 64.25, 64.5 , 64.75, 65.  , 65.25, 65.5 , 65.75, 66.  , 66.25,
+       66.5 , 66.75, 67.  , 67.25, 67.5 , 67.75, 68.  , 68.25, 68.5 , 68.75,
+       69.  , 69.25, 69.5 , 69.75, 70.  , 70.25, 70.5 , 70.75, 71.  , 71.25,
+       71.5 , 71.75, 72.  ], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1950-01-01 ... 2022-12-01</div><input id='attrs-9065d884-9f3a-44d1-a48a-f0a02787414f' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-9065d884-9f3a-44d1-a48a-f0a02787414f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-62e7c252-92f2-4910-9816-3a330ffa1da8' class='xr-var-data-in' type='checkbox'><label for='data-62e7c252-92f2-4910-9816-3a330ffa1da8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([&#x27;1950-01-01T00:00:00.000000000&#x27;, &#x27;1950-02-01T00:00:00.000000000&#x27;,
+       &#x27;1950-03-01T00:00:00.000000000&#x27;, ..., &#x27;2022-10-01T00:00:00.000000000&#x27;,
+       &#x27;2022-11-01T00:00:00.000000000&#x27;, &#x27;2022-12-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>month</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1 2 3 4 5 6 7 ... 6 7 8 9 10 11 12</div><input id='attrs-328bbcd1-b5a9-4486-8773-0df81efbf406' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-328bbcd1-b5a9-4486-8773-0df81efbf406' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-88c41a0a-3cc5-463a-9dae-32031ed742b6' class='xr-var-data-in' type='checkbox'><label for='data-88c41a0a-3cc5-463a-9dae-32031ed742b6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,
+        6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+       11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,
+        4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,
+        9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,
+        2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,
+        7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,
+       12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,
+        5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9,
+       10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,
+        3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,
+        8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+        1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,
+        6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+       11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,
+        4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,
+        9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,
+        2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,
+        7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,
+       12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,
+...
+        5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9,
+       10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,
+        3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,
+        8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+        1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,
+        6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+       11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,
+        4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,
+        9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,
+        2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,
+        7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,
+       12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,
+        5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9,
+       10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,
+        3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,
+        8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
+        1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,
+        6,  7,  8,  9, 10, 11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10,
+       11, 12,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,  1,  2,  3,
+        4,  5,  6,  7,  8,  9, 10, 11, 12])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f9a0030d-d0da-4061-8b0f-460cf3f9e689' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f9a0030d-d0da-4061-8b0f-460cf3f9e689' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>t2m</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>16.74 16.72 16.68 ... 0.1178 0.1051</div><input id='attrs-3aca4d02-f5ab-4b42-a907-6e3cb1b68441' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3aca4d02-f5ab-4b42-a907-6e3cb1b68441' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d32286c4-8377-41a7-9fdd-93362fea396a' class='xr-var-data-in' type='checkbox'><label for='data-d32286c4-8377-41a7-9fdd-93362fea396a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[ 16.740326  ,  16.716766  ,  16.67871   , ...,   3.1207886 ,
+           3.2929688 ,   3.5412598 ],
+        [ 16.65152   ,  16.631592  ,  16.595337  , ...,   2.9087524 ,
+           3.0845337 ,   3.2875366 ],
+        [ 16.535522  ,  16.519226  ,  16.499298  , ...,   2.6495972 ,
+           2.787323  ,   2.8996887 ],
+        ...,
+        [-15.881317  , -15.895813  , -15.758087  , ...,  -1.4734192 ,
+          -1.5241699 ,  -1.5785522 ],
+        [-18.771957  , -17.6447    , -16.521057  , ...,  -1.54953   ,
+          -1.6039124 ,  -1.6564636 ],
+        [-19.157974  , -18.05066   , -17.110077  , ...,  -1.6256714 ,
+          -1.6963501 ,  -1.7470703 ]],
+
+       [[ 16.464844  ,  16.450348  ,  16.419556  , ...,   4.786316  ,
+           5.2013245 ,   5.5746765 ],
+        [ 16.40866   ,  16.388733  ,  16.361542  , ...,   4.8153076 ,
+           5.2430115 ,   5.5674133 ],
+        [ 16.33075   ,  16.30899   ,  16.28543   , ...,   4.976593  ,
+           5.355377  ,   5.5728455 ],
+...
+        [ -9.190247  ,  -8.856781  ,  -8.398285  , ...,   2.9866638 ,
+           2.9595032 ,   2.932312  ],
+        [-12.843872  , -11.2309265 ,  -9.625214  , ...,   2.906952  ,
+           2.8761292 ,   2.8435059 ],
+        [-12.7786255 , -11.194672  , -10.205139  , ...,   2.8018188 ,
+           2.7909546 ,   2.7601318 ]],
+
+       [[ 18.824493  ,  18.835358  ,  18.84079   , ...,   9.695862  ,
+           9.960449  ,  10.30661   ],
+        [ 18.66861   ,  18.66861   ,  18.659576  , ...,   9.98764   ,
+          10.259491  ,  10.533142  ],
+        [ 18.518219  ,  18.509155  ,  18.465637  , ...,  10.35556   ,
+          10.565765  ,  10.779633  ],
+        ...,
+        [-19.360962  , -18.757462  , -17.824112  , ...,   0.2518921 ,
+           0.25552368,   0.25732422],
+        [-22.983765  , -21.1624    , -19.346466  , ...,   0.20114136,
+           0.18664551,   0.17398071],
+        [-21.591919  , -19.804977  , -19.370026  , ...,   0.1159668 ,
+           0.11779785,   0.10510254]]], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lsm</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.0 0.0 0.0 0.0 ... 0.0 0.0 0.0 0.0</div><input id='attrs-1be8f970-7dd8-478c-a928-9e9f54be8de3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1be8f970-7dd8-478c-a928-9e9f54be8de3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-20dc8f48-cfa4-40cb-8fc6-535e44561f20' class='xr-var-data-in' type='checkbox'><label for='data-20dc8f48-cfa4-40cb-8fc6-535e44561f20' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>(0 - 1)</dd><dt><span>long_name :</span></dt><dd>Land-sea mask</dd><dt><span>standard_name :</span></dt><dd>land_binary_mask</dd></dl></div><div class='xr-var-data'><pre>array([[[0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        ...,
+        [0.9363069 , 0.99511695, 0.99574256, ..., 0.        ,
+         0.        , 0.        ],
+        [0.9996033 , 0.999588  , 0.999588  , ..., 0.        ,
+         0.        , 0.        ],
+        [0.999115  , 0.99913025, 0.99949646, ..., 0.        ,
+         0.        , 0.        ]],
+
+       [[0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+...
+        [0.9363069 , 0.99511695, 0.99574256, ..., 0.        ,
+         0.        , 0.        ],
+        [0.9996033 , 0.999588  , 0.999588  , ..., 0.        ,
+         0.        , 0.        ],
+        [0.999115  , 0.99913025, 0.99949646, ..., 0.        ,
+         0.        , 0.        ]],
+
+       [[0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        [0.        , 0.        , 0.        , ..., 1.        ,
+         1.        , 1.        ],
+        ...,
+        [0.9363069 , 0.99511695, 0.99574256, ..., 0.        ,
+         0.        , 0.        ],
+        [0.9996033 , 0.999588  , 0.999588  , ..., 0.        ,
+         0.        , 0.        ],
+        [0.999115  , 0.99913025, 0.99949646, ..., 0.        ,
+         0.        , 0.        ]]], dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>anom</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-0.7348 -0.7398 ... 1.13 1.138</div><input id='attrs-81c5e2b0-2e78-4687-9f0f-422120e94921' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-81c5e2b0-2e78-4687-9f0f-422120e94921' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-465e03fe-6eca-48ed-b5d9-fd605266f3f9' class='xr-var-data-in' type='checkbox'><label for='data-465e03fe-6eca-48ed-b5d9-fd605266f3f9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([[[-0.73483086, -0.7398453 , -0.756155  , ..., -4.023641  ,
+         -4.0477304 , -4.0554028 ],
+        [-0.7367649 , -0.7371254 , -0.7498169 , ..., -4.420413  ,
+         -4.4401164 , -4.452115  ],
+        [-0.75538254, -0.7521057 , -0.7517376 , ..., -4.8992786 ,
+         -4.899709  , -4.9345064 ],
+        ...,
+        [ 1.6163387 ,  1.3023891 ,  0.94474983, ...,  0.62337756,
+          0.59208584,  0.5621674 ],
+        [ 2.7093449 ,  2.0645866 ,  1.4218254 , ...,  0.67093205,
+          0.647053  ,  0.6254945 ],
+        [ 2.217369  ,  1.5841942 ,  1.5774231 , ...,  0.72158813,
+          0.6753173 ,  0.6545613 ]],
+
+       [[-0.34567833, -0.33932877, -0.34819603, ..., -4.344407  ,
+         -4.1849356 , -4.144865  ],
+        [-0.30653572, -0.30223846, -0.30532265, ..., -4.556698  ,
+         -4.38241   , -4.341156  ],
+        [-0.28458595, -0.28157234, -0.28199768, ..., -4.714981  ,
+         -4.511447  , -4.476116  ],
+...
+        [ 5.3516483 ,  5.33395   ,  5.2221107 , ...,  2.2004344 ,
+          2.1804056 ,  2.1636639 ],
+        [ 5.826771  ,  5.6166515 ,  5.404557  , ...,  2.2480671 ,
+          2.23561   ,  2.2217143 ],
+        [ 5.623436  ,  5.4169445 ,  5.4165354 , ...,  2.2932343 ,
+          2.2865458 ,  2.2740824 ]],
+
+       [[ 0.38694   ,  0.40994453,  0.43053627, ...,  1.0931273 ,
+          1.1631355 ,  1.2579851 ],
+        [ 0.31544876,  0.3308487 ,  0.34018517, ...,  1.2334557 ,
+          1.3026915 ,  1.3780737 ],
+        [ 0.2577839 ,  0.26449013,  0.2395153 , ...,  1.471673  ,
+          1.5321817 ,  1.5753918 ],
+        ...,
+        [-1.9801979 , -1.700922  , -1.2943516 , ...,  0.9602173 ,
+          0.9686819 ,  0.9799703 ],
+        [-1.6212883 , -1.5949593 , -1.5690441 , ...,  1.0476258 ,
+          1.0539113 ,  1.0616648 ],
+        [-0.451149  , -0.42746925, -0.9128113 , ...,  1.1198812 ,
+          1.1301076 ,  1.1375356 ]]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-57f9843c-a966-4a3e-83ec-98ba495fa227' class='xr-section-summary-in' type='checkbox'  ><label for='section-57f9843c-a966-4a3e-83ec-98ba495fa227' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-5ae21e45-b3d6-49c6-bb51-698de8ccf6ee' class='xr-index-data-in' type='checkbox'/><label for='index-5ae21e45-b3d6-49c6-bb51-698de8ccf6ee' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ -25.0, -24.75,  -24.5, -24.25,  -24.0, -23.75,  -23.5, -23.25,
+               -23.0, -22.75,
+              ...
+               37.75,   38.0,  38.25,   38.5,  38.75,   39.0,  39.25,   39.5,
+               39.75,   40.0],
+             dtype=&#x27;float64&#x27;, name=&#x27;lon&#x27;, length=261))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-1f0cdd0e-5663-4fcb-bfb6-d933ff897361' class='xr-index-data-in' type='checkbox'/><label for='index-1f0cdd0e-5663-4fcb-bfb6-d933ff897361' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([ 34.0, 34.25,  34.5, 34.75,  35.0, 35.25,  35.5, 35.75,  36.0,
+              36.25,
+              ...
+              69.75,  70.0, 70.25,  70.5, 70.75,  71.0, 71.25,  71.5, 71.75,
+               72.0],
+             dtype=&#x27;float64&#x27;, name=&#x27;lat&#x27;, length=153))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-48e2af55-5060-4910-b3cc-c2c583c05a44' class='xr-index-data-in' type='checkbox'/><label for='index-48e2af55-5060-4910-b3cc-c2c583c05a44' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;1950-01-01&#x27;, &#x27;1950-02-01&#x27;, &#x27;1950-03-01&#x27;, &#x27;1950-04-01&#x27;,
+               &#x27;1950-05-01&#x27;, &#x27;1950-06-01&#x27;, &#x27;1950-07-01&#x27;, &#x27;1950-08-01&#x27;,
+               &#x27;1950-09-01&#x27;, &#x27;1950-10-01&#x27;,
+               ...
+               &#x27;2022-03-01&#x27;, &#x27;2022-04-01&#x27;, &#x27;2022-05-01&#x27;, &#x27;2022-06-01&#x27;,
+               &#x27;2022-07-01&#x27;, &#x27;2022-08-01&#x27;, &#x27;2022-09-01&#x27;, &#x27;2022-10-01&#x27;,
+               &#x27;2022-11-01&#x27;, &#x27;2022-12-01&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=876, freq=&#x27;MS&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6eb53eb4-d236-43e5-b651-db280d966010' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6eb53eb4-d236-43e5-b651-db280d966010' class='xr-section-summary' >Attributes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>history :</span></dt><dd>2023-07-18 21:45:16 GMT by grib_to_netcdf-2.25.1: /opt/ecmwf/mars-client/bin/grib_to_netcdf.bin -S param -o /cache/data9/adaptor.mars.internal-1689716608.4304297-30290-1-58d02187-6545-4a99-83e3-91816a555a27.nc /cache/tmp/58d02187-6545-4a99-83e3-91816a555a27-adaptor.mars.internal-1689716230.1355975-30290-1-tmp.grib</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+<section id="e-obs">
+<h4>E-OBS<a class="headerlink" href="#e-obs" title="Permalink to this heading">#</a></h4>
+<p>E-OBS can be downloaded either at high resolution (0.10º) or low resolution (0.25º). Here, we use the lower resolution, as it matches that of ERA5, making the comparison more direct.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
+
+<span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="s1">&#39;insitu-gridded-observations-europe&#39;</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;tgz&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;product_type&#39;</span><span class="p">:</span> <span class="s1">&#39;ensemble_mean&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="s1">&#39;mean_temperature&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;grid_resolution&#39;</span><span class="p">:</span> <span class="s1">&#39;0.25deg&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;period&#39;</span><span class="p">:</span> <span class="s1">&#39;full_period&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;27.0e&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">path_to</span><span class="p">[</span><span class="s1">&#39;eobs&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data is downloaded as a compressed <code class="docutils literal notranslate"><span class="pre">.tgz</span></code> file. We use the <code class="docutils literal notranslate"><span class="pre">tarfile</span></code> library to unpack the compressed file and save it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open file</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">tarfile</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path_to</span><span class="p">[</span><span class="s1">&#39;eobs&#39;</span><span class="p">])</span>
+  
+<span class="c1"># print file names</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">getnames</span><span class="p">())</span>
+  
+<span class="c1"># extract files</span>
+<span class="n">file</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="s1">&#39;data/eobs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;tg_ens_mean_0.25deg_reg_v27.0e.nc&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>After unpacking, we get a single NetCDF file [<code class="docutils literal notranslate"><span class="pre">tg_ens_mean_0.25deg_reg_v27.0e.nc</span></code>], which we can open with <code class="docutils literal notranslate"><span class="pre">xarray</span></code> and then streamline.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_daily</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s2">&quot;data/eobs/tg_ens_mean_0.25deg_reg_v27.0e.nc&quot;</span><span class="p">)</span>
+<span class="n">eobs_daily</span> <span class="o">=</span> <span class="n">streamline_coords</span><span class="p">(</span><span class="n">eobs_daily</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similar to ERA5, we first focus on our defined central European region. Since E-OBS comes in daily resolution, we initially compute a second, monthly resolved version. We take a conservative approach and set the monthly average to <code class="docutils literal notranslate"><span class="pre">NaN</span></code> if there is at least one missing value within the month (<code class="docutils literal notranslate"><span class="pre">skipna=False</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure 1. Annual European land surface air temperature anomalies for</span>
+<span class="c1"># 1950 to 2022, relative to the 1991–2020 reference period.</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="c1"># Select the region of interest</span>
+<span class="n">eobs_daily</span> <span class="o">=</span> <span class="n">eobs_daily</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REGIONS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+
+<span class="c1"># Convert EOBS to monthly</span>
+<span class="n">eobs</span> <span class="o">=</span> <span class="n">eobs_daily</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;MS&quot;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+
+<span class="c1"># Let&#39;s compute and load the data into memory which makes further processing faster</span>
+<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">():</span>
+    <span class="n">eobs</span> <span class="o">=</span> <span class="n">eobs</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+
+<span class="c1"># Calculate the monthly climatology</span>
+<span class="n">eobs_monthly_climatology</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;tg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REF_PERIOD</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;tg&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.month&quot;</span><span class="p">)</span> <span class="o">-</span> <span class="n">eobs_monthly_climatology</span>
+<span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;climatology&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">eobs_monthly_climatology</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[########################################] | 100% Completed | 53.39 s
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="annual-anomalies">
+<h3>Annual Anomalies<a class="headerlink" href="#annual-anomalies" title="Permalink to this heading">#</a></h3>
+<p>Our first goal will be to calculate annual anomalies based on ERA5 and E-OBS. Basically, two steps are necessary for this:</p>
+<ol class="arabic simple">
+<li><p>Calculation of a <strong>spatial mean of the anomalies</strong> in Europe per time step, taking into account the land-sea mask.</p></li>
+<li><p>Calculation of the <strong>annual anomaly</strong> based on the monthly anomalies, weighting the individual months based on the number of days.</p></li>
+</ol>
+<p>We summarize these two steps into two functions and finally define a function that carries out both steps in one go.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weighted_spatial_average</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">land_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the weighted spatial average of a DataArray.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    da : xr.DataArray</span>
+<span class="sd">        The DataArray to average.</span>
+<span class="sd">    weights : xr.DataArray, optional</span>
+<span class="sd">        A DataArray with the same dimensions as `da` containing the weights.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Area weighting: calculate the area of each grid cell</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">da</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+
+    <span class="c1"># Additional user-specified weights, e.g. land-sea mask</span>
+    <span class="k">if</span> <span class="n">land_mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">weights</span> <span class="o">*</span> <span class="n">land_mask</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">da</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weighted_annual_average</span><span class="p">(</span><span class="n">da</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the weighted annual average per year.&quot;&quot;&quot;</span>
+    <span class="n">days_in_month</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days_in_month</span>
+    <span class="n">weights</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">days_in_month</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="n">days_in_month</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">sum_weights</span> <span class="o">=</span> <span class="n">weights</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">sum_weights</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">da</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the monthly climatology</span>
+<span class="k">def</span> <span class="nf">annual_anomalies</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">land_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="c1"># 1. Calculate the spatial average</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">weighted_spatial_average</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">land_mask</span><span class="p">)</span>
+    <span class="c1"># 2. Calculate the weighted (per days in month) annual average</span>
+    <span class="k">return</span> <span class="n">weighted_annual_average</span><span class="p">(</span><span class="n">da</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, calculating the annual anomalies is a one-liner! We give each dataset an appropriate name and then proceed directly to visualization.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_europe_anom</span> <span class="o">=</span> <span class="n">annual_anomalies</span><span class="p">(</span><span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">],</span> <span class="n">land_mask</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">era5_europe_anom</span> <span class="o">=</span> <span class="n">annual_anomalies</span><span class="p">(</span><span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">],</span> <span class="n">land_mask</span><span class="o">=</span><span class="n">era5</span><span class="p">[</span><span class="s2">&quot;lsm&quot;</span><span class="p">])</span>
+
+<span class="n">eobs_europe_anom</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;EOBS&quot;</span>
+<span class="n">era5_europe_anom</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ERA5&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following visualization of the annual temperature anomalies is modeled after the corresponding representation in this year’s <a class="reference external" href="https://climate.copernicus.eu/esotc/2022/temperature">ESOTC 2022</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">barplot_temperature</span><span class="p">(</span><span class="n">da1</span><span class="p">,</span> <span class="n">da2</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+    <span class="c1"># make red and blue colors for above and below zero</span>
+    <span class="n">clrs</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;Paired&quot;</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">clrs_da1</span> <span class="o">=</span> <span class="p">[</span><span class="n">clrs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">anom</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">clrs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="k">for</span> <span class="n">anom</span> <span class="ow">in</span> <span class="n">da1</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+    <span class="n">clrs_da2</span> <span class="o">=</span> <span class="p">[</span><span class="n">clrs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">anom</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">clrs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="k">for</span> <span class="n">anom</span> <span class="ow">in</span> <span class="n">da2</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">da1</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+        <span class="n">da1</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">clrs_da1</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="n">da1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">da2</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+        <span class="n">da2</span><span class="p">,</span>
+        <span class="mf">0.25</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">clrs_da2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;ERA5&quot;</span><span class="p">,</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="c1"># Add an annotation for both datasets pointing to the last bar at the right hand side</span>
+    <span class="c1"># with text &quot;ERA5&quot; and &quot;EOBS&quot; respectively. The text should be in the same color as</span>
+    <span class="c1"># the bar.</span>
+    <span class="n">da1_final_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">da1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">da1</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+    <span class="n">da2_final_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">da2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="n">da2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="n">da1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">xy</span><span class="o">=</span><span class="n">da1_final_data</span><span class="p">,</span>
+        <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">),</span>
+        <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">clrs</span><span class="p">[</span><span class="mi">4</span><span class="p">]),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">clrs</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="n">xycoords</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+        <span class="n">da2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">xy</span><span class="o">=</span><span class="n">da2_final_data</span><span class="p">,</span>
+        <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">),</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">clrs</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span>
+        <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">clrs</span><span class="p">[</span><span class="mi">5</span><span class="p">]),</span>
+        <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="n">xycoords</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;.5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;European annual temperature anomalies (in ºC)&quot;</span>
+<span class="n">barplot_temperature</span><span class="p">(</span><span class="n">eobs_europe_anom</span><span class="p">,</span> <span class="n">era5_europe_anom</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c9d0f9e550b2f8bc48a327fc13d9cd877317536c0d78017fdb8865ed585e286a.png" src="../_images/c9d0f9e550b2f8bc48a327fc13d9cd877317536c0d78017fdb8865ed585e286a.png" />
+</div>
+</div>
+<p>Overall, we see that both datasets essentially agree, and the annual anomalies of the last ~70 years show a high degree of consistency. Let’s take a closer look by calculating the difference between ERA5 and E-OBS and plotting it in a bar plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="n">era5_europe_anom</span> <span class="o">-</span> <span class="n">eobs_europe_anom</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clrs_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">diff</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;tab:red&quot;</span><span class="p">,</span> <span class="s2">&quot;tab:blue&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">diff</span><span class="o">.</span><span class="n">year</span><span class="p">,</span>
+    <span class="n">diff</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">clrs_diff</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;.5&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;ERA5 tends to underestimate temperatures in Europe in the 50s and 60s&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+    <span class="s2">&quot;Cold bias in the 50s and 60s between ~0.1 and 0.3 ºC&quot;</span><span class="p">,</span>
+    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">1966</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.245</span><span class="p">),</span>
+    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">1977</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">),</span>
+    <span class="c1"># make a curved arrow</span>
+    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">,</span>
+        <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;angle3,angleA=0,angleB=-30&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="n">xycoords</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;ERA5 - EOBS temperature anomaly (in ºC)&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/670e702d68fbb13a2b2c9ecf69ce882b6ca240b0c856fbbac738b39f32eff0b0.png" src="../_images/670e702d68fbb13a2b2c9ecf69ce882b6ca240b0c856fbbac738b39f32eff0b0.png" />
+</div>
+</div>
+<p>It becomes clear from this that the discrepancy between reanalysis and observation has been very small since the mid-90s, with deviations usually significantly below 0.1 ºC. However, it is also evident that the differences can be much higher at the beginning of the reanalysis, with deviations up to ~0.3ºC. Moreover, we find that these are not statistical but systematic deviations, as ERA5 tends to show colder temperatures in the 50s and partly 60s compared to observation data.</p>
+<p>Next, we’ll examine the spatial differences in the annual anomalies for 2022. To do this, we calculate the mean annual anomalies using our already defined function, without first calculating the spatial average.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure 2. Average surface air temperature anomaly for 2022,</span>
+<span class="c1"># relative to the 1991–2020 reference period.</span>
+<span class="c1"># =============================================================================</span>
+
+<span class="n">eobs_yearly_anoms</span> <span class="o">=</span> <span class="n">weighted_annual_average</span><span class="p">(</span><span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">])</span>
+<span class="n">era5_yearly_anoms</span> <span class="o">=</span> <span class="n">weighted_annual_average</span><span class="p">(</span><span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we present the spatially resolved annual anomalies. We will also define a function for this plot that we can reuse later. To better understand the anomalies, we visualize basic quantities of the underlying statistical distribution of both datasets in the form of a boxplot, which we apply to the color bar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Data&quot;</span><span class="p">],</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlBu_r&quot;</span><span class="p">,</span>
+    <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperature anomaly (ºC)&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">spatial_plot_temperature</span><span class="p">(</span><span class="n">da1</span><span class="p">,</span> <span class="n">da2</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+    <span class="n">proj</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Orthographic</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">central_latitude</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">],</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+    <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+    <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+    <span class="n">cax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">cax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">]:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="s2">&quot;50m&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.6&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.8&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">72</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Data&quot;</span><span class="p">])</span>
+
+    <span class="n">da1</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">cbar_ax</span><span class="o">=</span><span class="n">cax1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">da2</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">cbar_ax</span><span class="o">=</span><span class="n">cax2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="n">da1_dist</span> <span class="o">=</span> <span class="n">da1</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">da2_dist</span> <span class="o">=</span> <span class="n">da2</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="n">boxplot_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">vert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">positions</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+        <span class="n">whis</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+        <span class="n">widths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">flierprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">cax1</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">da1_dist</span><span class="p">,</span> <span class="o">**</span><span class="n">boxplot_kwargs</span><span class="p">)</span>
+    <span class="n">cax2</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">da2_dist</span><span class="p">,</span> <span class="o">**</span><span class="n">boxplot_kwargs</span><span class="p">)</span>
+
+    <span class="n">cax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+    <span class="n">cax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+
+    <span class="c1"># Move the y-axis label to the left for the left colorbar</span>
+    <span class="n">cax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">cax1</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">da1</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">da2</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We define the names and the year to be visualized:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">YEAR</span> <span class="o">=</span> <span class="mi">2022</span>
+
+<span class="n">eobs_yearly_anoms</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;E-OBS&quot;</span>
+<span class="n">era5_yearly_anoms</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ERA5&quot;</span>
+
+<span class="n">spatial_plot_temperature</span><span class="p">(</span><span class="n">eobs_yearly_anoms</span><span class="p">,</span> <span class="n">era5_yearly_anoms</span><span class="p">,</span> <span class="n">YEAR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/237e143fcc4c75dc387f92343d1db90a4a734a813c764878d8d1c4ca4bc2402e.png" src="../_images/237e143fcc4c75dc387f92343d1db90a4a734a813c764878d8d1c4ca4bc2402e.png" />
+</div>
+</div>
+<p>Et voilà! Here we see the temperature anomaly in 2022 based on ERA5 and E-OBS.</p>
+<p>Here too, we calculate the difference. However, we find that although both datasets are represented by a regular 0.25º grid, both grids define the respective center of a grid point differently, resulting in a 0.125 º offset along both latitude and longitude.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">era5_yearly_anoms</span><span class="o">.</span><span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coordinates:
+  * lon      (lon) float32 -25.0 -24.75 -24.5 -24.25 ... 39.25 39.5 39.75 40.0
+  * lat      (lat) float32 34.0 34.25 34.5 34.75 35.0 ... 71.25 71.5 71.75 72.0
+  * year     (year) int64 1950 1951 1952 1953 1954 ... 2018 2019 2020 2021 2022
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_yearly_anoms</span><span class="o">.</span><span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coordinates:
+  * lon      (lon) float64 -24.88 -24.62 -24.38 -24.12 ... 39.38 39.62 39.88
+  * lat      (lat) float64 34.12 34.38 34.62 34.88 ... 71.12 71.38 71.62 71.88
+  * year     (year) int64 1950 1951 1952 1953 1954 ... 2018 2019 2020 2021 2022
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fortunately, since they are rectilinear grids, we can use the linear interpolation in <code class="docutils literal notranslate"><span class="pre">xarray</span></code> to interpolate the E-OBS dataset onto the ERA5 grid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="o">=</span> <span class="n">era5_yearly_anoms</span> <span class="o">-</span> <span class="n">eobs_yearly_anoms</span><span class="o">.</span><span class="n">interp_like</span><span class="p">(</span><span class="n">era5_yearly_anoms</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can also visualize the difference:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">1.8</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">)</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Data&quot;</span><span class="p">],</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlBu_r&quot;</span><span class="p">,</span>
+    <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperature anomaly (ºC)&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">],</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+<span class="n">cax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="s2">&quot;50m&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.6&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.8&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">72</span><span class="p">],</span> <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+<span class="n">diff</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">YEAR</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">cbar_ax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Difference between ERA5 - EOBS  (</span><span class="si">{</span><span class="n">YEAR</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">YEAR</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="s2">&quot;lon&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">cax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+    <span class="n">dist</span><span class="p">,</span>
+    <span class="n">vert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">positions</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">],</span>
+    <span class="n">whis</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">95</span><span class="p">),</span>
+    <span class="n">widths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">flierprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2590346287a1cd1df264c1754df81e1f76ee8e3b0f7f2fbfe8a09a72c471999b.png" src="../_images/2590346287a1cd1df264c1754df81e1f76ee8e3b0f7f2fbfe8a09a72c471999b.png" />
+</div>
+</div>
+<p>From this plot, the following observations can be made:</p>
+<ul class="simple">
+<li><p>In wide areas of Europe, the difference between ERA5 and E-OBS was less than 0.2ºC.</p></li>
+<li><p>The deviations do not show a clear systematic error.</p></li>
+<li><p>Larger deviations exist around the rugged coastal areas of Norway, along the coasts of Portugal and Italy, in the Carpathian region, and on the edge of the observation network, such as Algeria and Turkey.</p></li>
+</ul>
+</section>
+<section id="seasonal-anomalies">
+<h3>Seasonal Anomalies<a class="headerlink" href="#seasonal-anomalies" title="Permalink to this heading">#</a></h3>
+<p>In this section, we will make similar calculations as in the previous section but for seasonal anomalies instead of annual ones. We start by defining two helper functions that allow us to:</p>
+<ol class="arabic simple">
+<li><p>Calculate a weighted seasonal mean, taking into account the number of days per month.</p></li>
+<li><p>Convert the time coordinate into seasonal categories.</p></li>
+</ol>
+<p>The calculation of the seasonal mean is basically the same as that of the annual mean. Typically, the boreal seasons are defined as:</p>
+<ul class="simple">
+<li><p>Winter: December, January, February (DJF)</p></li>
+<li><p>Spring: March, April, May (MAM)</p></li>
+<li><p>Summer: June, July, August (JJA)</p></li>
+<li><p>Autumn: September, October, November (SON)</p></li>
+</ul>
+<p>It is important to note that the winter of a year (say 2022) usually consists of December <strong>2021</strong>, January 2022, and February 2022. The following function calculates the weighted seasonal mean:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure 3a. European land surface air temperature anomalies</span>
+<span class="c1"># for SEASONS, relative to the average for the 1991–2020 reference period.</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="k">def</span> <span class="nf">weighted_seasonal_average</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the weighted seasonal average per year and grid point.</span>
+
+<span class="sd">    Important: in case there are missing values in the data the weighted average will be wrong.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">month_length</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days_in_month</span>
+    <span class="n">ds_weighted_sum</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds</span> <span class="o">*</span> <span class="n">month_length</span><span class="p">)</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;QS-DEC&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">skipna</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">sum_of_weights</span> <span class="o">=</span> <span class="n">month_length</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;QS-DEC&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">ds_weighted_sum</span> <span class="o">/</span> <span class="n">sum_of_weights</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Alright, let’s walk step by step through the function to understand what’s going on there:</p>
+<p><strong>Calculate Month Length</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">month_length</span> <span class="pre">=</span> <span class="pre">ds.time.dt.days_in_month</span></code></p>
+<p>calculates the number of days in each month for each time step in the dataset. This will be used as the weights since some months have more days than others.</p>
+<p><strong>Calculate Weighted Sum for Each Season</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">ds_weighted_sum</span> <span class="pre">=</span> <span class="pre">(ds</span> <span class="pre">*</span> <span class="pre">month_length).resample(time=&quot;QS-DEC&quot;).sum(skipna=False)</span></code></p>
+<p>multiplies the dataset by the month lengths, weighting each value by the number of days in that month. Then it’s resampled by the quarter starting in December (<code class="docutils literal notranslate"><span class="pre">&quot;QS-DEC&quot;</span></code>), and the sum is calculated for each quarter, resulting in a seasonal sum.</p>
+<p><strong>Calculate Sum of Weights for Each Season</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">sum_of_weights</span> <span class="pre">=</span> <span class="pre">month_length.resample(time=&quot;QS-DEC&quot;).sum()</span></code></p>
+<p>calculates the sum of the weights (days in months) for each season. This ensures that the average takes into account the varying number of days in different seasons.</p>
+<p><strong>Calculate the Weighted Seasonal Average</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">ds_weighted_sum</span> <span class="pre">/</span> <span class="pre">sum_of_weights</span></code></p>
+<p>divides the weighted sum for each season by the sum of the weights for that season, resulting in a weighted seasonal average.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_seasonal</span> <span class="o">=</span> <span class="n">weighted_seasonal_average</span><span class="p">(</span><span class="n">eobs</span><span class="p">[[</span><span class="s2">&quot;anom&quot;</span><span class="p">]])</span>
+<span class="n">era5_seasonal</span> <span class="o">=</span> <span class="n">weighted_seasonal_average</span><span class="p">(</span><span class="n">era5</span><span class="p">[[</span><span class="s2">&quot;anom&quot;</span><span class="p">,</span> <span class="s2">&quot;lsm&quot;</span><span class="p">]])</span>
+<span class="n">eobs_seasonal</span><span class="o">.</span><span class="n">coords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coordinates:
+  * lon      (lon) float64 -24.88 -24.62 -24.38 -24.12 ... 39.38 39.62 39.88
+  * lat      (lat) float64 34.12 34.38 34.62 34.88 ... 71.12 71.38 71.62 71.88
+  * time     (time) datetime64[ns] 1949-12-01 1950-03-01 ... 2022-12-01
+</pre></div>
+</div>
+</div>
+</div>
+<p>Great! As we can see, the time coordinate is in the <code class="docutils literal notranslate"><span class="pre">&quot;QS-DEC&quot;</span></code> format as expected, i.e., quarterly anchored on December 1st. However, for easier processing and visualization, another coordinate representation is useful, where we replace the <code class="docutils literal notranslate"><span class="pre">&quot;QS-DEC&quot;</span></code> format with two dimensions, <code class="docutils literal notranslate"><span class="pre">year</span></code> and <code class="docutils literal notranslate"><span class="pre">season</span></code>. Ideally, we would like to query our dataset as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">eobs_seasonal.sel(year=2022,</span> <span class="pre">season='DJF')</span></code></p>
+<p>This is now the second step, the conversion of the <code class="docutils literal notranslate"><span class="pre">time</span></code> coordinate, which is carried out in the following function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_time_to_year_season</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert the coordinates of a DataArray from &quot;time&quot; to (&quot;year&quot;, &quot;season&quot;)&quot;&quot;&quot;</span>
+    <span class="c1"># Get the year and season for each time</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+    <span class="n">season</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">season</span>
+
+    <span class="c1"># Assign the new coordinates (year, season)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="n">season</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">season</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+
+    <span class="c1"># Set the index of time as a MultiIndex which can then be unstacked into (..., &quot;season&quot;, &quot;year&quot;)</span>
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;season&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before applying the function, however, we must note that with the current implementation, winter 2022 would be assigned to 2021. A small workaround helps us here by shifting the time axis 31 days forward, so that all corresponding seasons fall into one year.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_seasonal</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">eobs_seasonal</span><span class="o">.</span><span class="n">time</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">31</span><span class="p">)})</span>
+<span class="n">era5_seasonal</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">era5_seasonal</span><span class="o">.</span><span class="n">time</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">31</span><span class="p">)})</span>
+
+<span class="n">eobs_seasonal</span> <span class="o">=</span> <span class="n">convert_time_to_year_season</span><span class="p">(</span><span class="n">eobs_seasonal</span><span class="p">)</span>
+<span class="n">era5_seasonal</span> <span class="o">=</span> <span class="n">convert_time_to_year_season</span><span class="p">(</span><span class="n">era5_seasonal</span><span class="p">)</span>
+
+<span class="n">eobs_seasonal</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="s2">&quot;DJF&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="p">[</span><span class="mi">1950</span><span class="p">,</span> <span class="mi">2023</span><span class="p">])]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">era5_seasonal</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="s2">&quot;DJF&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="p">[</span><span class="mi">1950</span><span class="p">,</span> <span class="mi">2023</span><span class="p">])]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the last two lines, we also replaced the first and last winter with <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, which are not fully represented in the datasets. Finally, we calculate the spatial means over the individual seasons using our previously defined function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_seasonal_average</span> <span class="o">=</span> <span class="n">weighted_spatial_average</span><span class="p">(</span><span class="n">eobs_seasonal</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">])</span>
+<span class="n">era5_seasonal_average</span> <span class="o">=</span> <span class="n">weighted_spatial_average</span><span class="p">(</span><span class="n">era5_seasonal</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">],</span> <span class="n">land_mask</span><span class="o">=</span><span class="n">era5_seasonal</span><span class="p">[</span><span class="s2">&quot;lsm&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For visualization, we can recycle our previous bar plot. Here we plot the time series for summer in Europe:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_seasonal_average</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;E-OBS&quot;</span>
+<span class="n">era5_seasonal_average</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ERA5&quot;</span>
+
+<span class="n">SEASON</span> <span class="o">=</span> <span class="s2">&quot;JJA&quot;</span>
+
+<span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;European </span><span class="si">{</span><span class="n">SEASON</span><span class="si">}</span><span class="s2"> temperature anomalies (in ºC)&quot;</span>
+<span class="n">barplot_temperature</span><span class="p">(</span>
+    <span class="n">eobs_seasonal_average</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">SEASON</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">era5_seasonal_average</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">SEASON</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">title</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/743f492ef3be90227f5a795976d5ede9466236d6e059da515b2135913d3277f7.png" src="../_images/743f492ef3be90227f5a795976d5ede9466236d6e059da515b2135913d3277f7.png" />
+</div>
+</div>
+<p>Also, for the spatial distribution of seasonal averages, we rely on our previously defined functions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure 4b. Surface air temperature anomalies for winter, spring, summer</span>
+<span class="c1"># and autumn 2022, relative to the respective seasonal average for the</span>
+<span class="c1"># 1991–2020 reference period.</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="n">eobs_seasonal_anom</span> <span class="o">=</span> <span class="n">eobs_seasonal</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">SEASON</span><span class="p">)</span>
+<span class="n">era5_seasonal_anom</span> <span class="o">=</span> <span class="n">era5_seasonal</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">season</span><span class="o">=</span><span class="n">SEASON</span><span class="p">)</span>
+
+<span class="n">eobs_seasonal_anom</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;E-OBS&quot;</span>
+<span class="n">era5_seasonal_anom</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ERA5&quot;</span>
+
+<span class="c1"># change again the levels for the colorbar</span>
+<span class="n">levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+    <span class="n">levels</span><span class="o">=</span><span class="n">levels</span><span class="p">,</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Data&quot;</span><span class="p">],</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdYlBu_r&quot;</span><span class="p">,</span>
+    <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Temperature anomaly (ºC)&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">spatial_plot_temperature</span><span class="p">(</span>
+    <span class="n">eobs_seasonal_anom</span><span class="p">,</span>
+    <span class="n">era5_seasonal_anom</span><span class="p">,</span>
+    <span class="n">YEAR</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/9551e99f6d1db15fc1dce528e1cae4f39822e2ae7cf80e371fed7e89f9fc6ccb.png" src="../_images/9551e99f6d1db15fc1dce528e1cae4f39822e2ae7cf80e371fed7e89f9fc6ccb.png" />
+</div>
+</div>
+</section>
+<section id="monthly-anomalies">
+<h3>Monthly Anomalies<a class="headerlink" href="#monthly-anomalies" title="Permalink to this heading">#</a></h3>
+<p>Besides a small function for gettinf the year-month index, no further preprocessing is needed for the visualisation of the monthly anomalies, as our data already exist in a monthly resolution, and we calculated the anomalies right at the beginning. So, let’s dive straight into the visualisation!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_time_to_year_month</span><span class="p">(</span><span class="n">ds</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert the coordinates of a DataArray from &quot;time&quot; to (&quot;year&quot;, &quot;month&quot;)&quot;&quot;&quot;</span>
+    <span class="c1"># Get the year and season for each time</span>
+    <span class="n">year</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+    <span class="n">month</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+
+    <span class="c1"># Assign the new coordinates (year, season)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">year</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="n">month</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">month</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+
+    <span class="c1"># Set the index of time as a MultiIndex which can then be unstacked into (..., &quot;month&quot;, &quot;year&quot;)</span>
+    <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;month&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Figure 5. Average surface air temperature anomalies for each month</span>
+<span class="c1"># of 2022, relative to the respective monthly average for the 1991–2020</span>
+<span class="c1"># reference period. Data source: ERA5. Credit: C3S/ECMWF.</span>
+<span class="c1"># -----------------------------------------------------------------------------</span>
+<span class="k">def</span> <span class="nf">plot_monthly_overview</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">convert_time_to_year_month</span><span class="p">(</span><span class="n">da</span><span class="p">)</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">GridSpec</span><span class="p">(</span>
+        <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figure</span><span class="o">=</span><span class="n">fig</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">i</span> <span class="o">//</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span><span class="p">],</span> <span class="n">projection</span><span class="o">=</span><span class="n">PROJS</span><span class="p">[</span><span class="s2">&quot;Europe&quot;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="p">]</span>
+    <span class="n">cax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">month</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="p">,</span> <span class="n">da</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
+        <span class="n">da</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="n">month</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cbar_ax</span><span class="o">=</span><span class="n">cax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="s2">&quot;50m&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">OCEAN</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.6&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">LAND</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;.8&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+            <span class="mf">0.02</span><span class="p">,</span>
+            <span class="mf">0.98</span><span class="p">,</span>
+            <span class="n">calendar</span><span class="o">.</span><span class="n">month_name</span><span class="p">[</span><span class="n">month</span><span class="p">],</span>
+            <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span>
+            <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+            <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
+            <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+            <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.91</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Monthly surface air temperature anomalies in 2022 (in ºC)&quot;</span>
+<span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;levels&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="s2">&quot;vmin&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;vmax&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">})</span>
+<span class="n">plot_monthly_overview</span><span class="p">(</span><span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">YEAR</span><span class="p">)),</span> <span class="n">title</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/deaf6d5ec7c55585068c9ae9d9159a1c3ede02a96f26dd6bcd3ef779a87cdf77.png" src="../_images/deaf6d5ec7c55585068c9ae9d9159a1c3ede02a96f26dd6bcd3ef779a87cdf77.png" />
+</div>
+</div>
+<p>Analogous to the annual differences, we will also calculate monthly differences here, using linear interpolation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">monthly_diffs</span> <span class="o">=</span> <span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">YEAR</span><span class="p">))</span> <span class="o">-</span> <span class="n">eobs</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
+    <span class="n">time</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">YEAR</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interp_like</span><span class="p">(</span><span class="n">era5</span><span class="p">[</span><span class="s2">&quot;anom&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Differences between ERA5 and EOBS in 2022 (in ºC)&quot;</span>
+<span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;levels&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">.5</span><span class="p">),</span> <span class="s2">&quot;vmin&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;vmax&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">})</span>
+<span class="n">plot_monthly_overview</span><span class="p">(</span><span class="n">monthly_diffs</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8b4d612cad7e298b8287c3520d7b741abf5a3da1825b29f57708978f1d32be0e.png" src="../_images/8b4d612cad7e298b8287c3520d7b741abf5a3da1825b29f57708978f1d32be0e.png" />
+</div>
+</div>
+</section>
+<section id="daily-anomalies">
+<h3>Daily Anomalies<a class="headerlink" href="#daily-anomalies" title="Permalink to this heading">#</a></h3>
+<p>As our final task, we will compute daily anomalies based on E-OBS. The following section is a direct reproduction of Figure 6 in <a class="reference external" href="https://climate.copernicus.eu/esotc/2022/temperature">ESOTC 2022</a>.</p>
+<p>First, we’ll calculate daily spatial averages based on the daily temperature values from E-OBS.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_daily_mean</span> <span class="o">=</span> <span class="n">weighted_spatial_average</span><span class="p">(</span><span class="n">eobs_daily</span><span class="p">[</span><span class="s2">&quot;tg&quot;</span><span class="p">])</span>
+
+<span class="k">with</span> <span class="n">ProgressBar</span><span class="p">():</span>
+    <span class="n">eobs_daily_mean</span> <span class="o">=</span> <span class="n">eobs_daily_mean</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[                                        ] | 0% Completed | 113.07 ms
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[########################################] | 100% Completed | 125.19 s
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, we must calculate the daily climatology, meaning the typical temperature for dates such as the 1st of January, the 2nd of January, and so on. These daily climatology values offer a vivid illustration of the expected seasonal temperature trend. However, a closer look reveals that the curve is not as smooth as one might anticipate; it appears rather “noisy.” This irregularity stems from the substantial fluctuations that can occur in daily temperatures. For example, the 1st of January in 2019 could be noticeably warmer than the same date in 2020.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_daily_clim</span> <span class="o">=</span> <span class="n">eobs_daily_mean</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REF_PERIOD</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.dayofyear&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">eobs_daily_clim</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fdac76a7b20&gt;]
+</pre></div>
+</div>
+<img alt="../_images/7bbfa75b689f532c6f2a64066cc5cf00a3e070ce54a0cc35e2fff7797f786bfc.png" src="../_images/7bbfa75b689f532c6f2a64066cc5cf00a3e070ce54a0cc35e2fff7797f786bfc.png" />
+</div>
+</div>
+<p>To understand these fluctuations, we can examine the 10th and 90th percentiles for each day, classifying temperatures outside this range as “extreme” or “anomalous.” From a statistical perspective, pinpointing the extremities of a distribution (such as these percentiles) demands more data than merely calculating an average. Given that the distribution for an individual day might only include 30 values (based on the climatology definition from 1991 to 2020), providing an accurate percentile estimate is challenging.</p>
+<p>Climate scientists often circumvent this issue by using a “running window” technique when calculating percentiles. For the 1st of January, for instance, this method would consider all temperature values for that date <span class="math notranslate nohighlight">\(\pm (N-1)/2\)</span> days. For example, with <span class="math notranslate nohighlight">\(N=31\)</span>, the percentiles for the 1st of January would be based on all temperature readings from the 15th of December to the 15th of January across the years 1991 to 2020. In this case, the percentile estimation would be based on <span class="math notranslate nohighlight">\(31*30 = 930\)</span> values instead of mere <span class="math notranslate nohighlight">\(30\)</span>. This window shifts by one day for the subsequent date, facilitating more accurate estimations of daily percentiles. Care must be taken to avoid an excessively large window, as this can lead to the blending of days with distinct climatological characteristics. In the following cell, we will compute these so-called moving percentiles (or quantiles) with a window of N=31, focusing on the 10th, 50th (median), and 90th percentiles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_windowed</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">eobs_daily_mean</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">REF_PERIOD</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">31</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">construct</span><span class="p">(</span><span class="s2">&quot;window_dim&quot;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">eobs_daily_quantiles</span> <span class="o">=</span> <span class="n">eobs_windowed</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.dayofyear&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span>
+    <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;window_dim&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">lower</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="n">eobs_daily_quantiles</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">dayofyear</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">365</span><span class="p">))</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+    <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="s2">&quot;dayofyear&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lastly, we need the temperature anomalies for the year 2022 with the same <code class="docutils literal notranslate"><span class="pre">dayofyear</span></code> coordinate as the climatology:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eobs_2022</span> <span class="o">=</span> <span class="n">eobs_daily_mean</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">YEAR</span><span class="p">))</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;time.dayofyear&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we plot the daily anomaly as positive (red) and negative (blue) deviations from the daily climatology. With the help of the 10th and 90th percentiles, we can identify on which days the year 2022 was “abnormally” warm or cold.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">eobs_daily_quantiles</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">quantile</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;dayofyear&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;.3&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">median</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">,</span>
+    <span class="n">eobs_2022</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eobs_2022</span> <span class="o">&gt;=</span> <span class="n">median</span><span class="p">,</span> <span class="n">median</span><span class="p">),</span>
+    <span class="n">median</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">median</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">,</span>
+    <span class="n">eobs_2022</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eobs_2022</span> <span class="o">&lt;=</span> <span class="n">median</span><span class="p">,</span> <span class="n">median</span><span class="p">),</span>
+    <span class="n">median</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">median</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">,</span>
+    <span class="n">eobs_2022</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eobs_2022</span> <span class="o">&gt;=</span> <span class="n">upper</span><span class="p">,</span> <span class="n">upper</span><span class="p">),</span>
+    <span class="n">upper</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;warmer than average&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span>
+    <span class="n">median</span><span class="o">.</span><span class="n">dayofyear</span><span class="p">,</span>
+    <span class="n">eobs_2022</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eobs_2022</span> <span class="o">&lt;=</span> <span class="n">lower</span><span class="p">,</span> <span class="n">lower</span><span class="p">),</span>
+    <span class="n">lower</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;colder than average&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">days_in_month_2022</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">eobs_daily</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days_in_month</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s2">&quot;2022&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">resample</span><span class="p">({</span><span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;MS&quot;</span><span class="p">})</span>
+    <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">xticks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">days_in_month_2022</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">xticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="n">calendar</span><span class="o">.</span><span class="n">month_abbr</span><span class="p">[</span><span class="n">x</span> <span class="o">%</span> <span class="mi">12</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xticks</span><span class="p">))]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xticklabels</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (ºC)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Daily temperature anomalies in Europe (2022) relative to 1991-2020&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/36170316c5a1078ec6f611fa1cea75d17d5ed5b033366c4b421d03d8726e09e5.png" src="../_images/36170316c5a1078ec6f611fa1cea75d17d5ed5b033366c4b421d03d8726e09e5.png" />
+</div>
+</div>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h3>
+<p>That’s it! In this second part, we’ve taken a closer look at ERA5 by comparing temperature anomalies with observational data in Europe. We have calculated annual, seasonal, monthly, and daily anomalies for this purpose.</p>
+<p>In the final part of the trilogy, we will focus on the current temperature anomalies and their visualisation in different regions of our Earth.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./02_temperature"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02a_temperature.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 2: Taking Earth’s Temperature</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02c_temperature.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 2: Taking Earth’s Temperature</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-comparing-re-analysis-with-observations-since-1950-a-class-anchor-id-chapter-one-a">PART II: Comparing Re-analysis with Observations since 1950 <a class="anchor" id="chapter-one"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-set-up">Getting Set Up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#era5">ERA5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#e-obs">E-OBS</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-anomalies">Annual Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonal-anomalies">Seasonal Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monthly-anomalies">Monthly Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-anomalies">Daily Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Niclas Rieger, Nikolaos Mastrantonas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
