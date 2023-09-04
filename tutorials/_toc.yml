@@ -22,7 +22,7 @@ parts:
 
 - caption: "3 | Journey to the Frozen Sea"
   chapters:
-  - file: 03_sea_ice/03_sea_ice.ipynb
+  - file: 03_sea_ice/03_sea_ice
     title: "Tracking Changes in Sea Ice"
 
 - caption: "4 | Rising Seas"
