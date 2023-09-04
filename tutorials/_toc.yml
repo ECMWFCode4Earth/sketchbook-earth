@@ -12,11 +12,11 @@ parts:
 - caption: "2 | Taking Earth's Temperature"
   chapters:
   - file: 02_temperature/02a_temperature
-    title: "Part I"
+    title: "Temperatures since 1850"
   - file: 02_temperature/02b_temperature
-    title: "Part II"
+    title: "Comparing Reanalysis with Observations since 1950"
   - file: 02_temperature/02c_temperature
-    title: "Part III"
+    title: "Visualising Recent Temperature Anomalies"
 
 - caption: "3 | Journey to the Frozen Sea"
   chapters:
