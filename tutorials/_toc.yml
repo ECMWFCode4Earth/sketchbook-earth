@@ -14,9 +14,9 @@ parts:
 - caption: "2 | Taking Earth's Temperature"
   chapters:
   - file: 02_temperature/02a_temperature
-    title: "Temperatures since 1850"
+    title: "It's Getting Hot(ter) in Here: Temperatures Since 1850"
   - file: 02_temperature/02b_temperature
-    title: "Comparing Reanalysis with Observations since 1950"
+    title: "Comparing Reanalysis with Observations Since 1950"
   - file: 02_temperature/02c_temperature
     title: "Visualising Recent Temperature Anomalies"
 
