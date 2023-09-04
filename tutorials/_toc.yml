@@ -11,11 +11,11 @@ parts:
 
 - caption: "2 | Taking Earth's Temperature"
   chapters:
-  - file: 02_temperature/02a_temperature.ipynb
+  - file: 02_temperature/02a_temperature
     title: "Part I"
-  - file: 02_temperature/02b_temperature.ipynb
+  - file: 02_temperature/02b_temperature
     title: "Part II"
-  - file: 02_temperature/02c_temperature.ipynb
+  - file: 02_temperature/02c_temperature
     title: "Part III"
 
 - caption: "3 | Journey to the Frozen Sea"
