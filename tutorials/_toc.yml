@@ -24,6 +24,12 @@ parts:
   chapters:
   - file: 03_sea_ice/03_sea_ice.ipynb
     title: "Tracking Changes in Sea Ice"
+
+- caption: "4 | Rising Seas"
+  chapters:
+  - file: 04_sea_level/04_sea_level.ipynb
+    title: "Rising Seas"
+
   #  - file: 04_sea_level.ipynb
   #    title: "Chapter 4: Rising seas"
   #  - file: 05_animations.ipynb
