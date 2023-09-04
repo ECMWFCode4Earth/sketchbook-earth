@@ -11,8 +11,12 @@ parts:
 
 - caption: "2 | Taking Earth's Temperature"
   chapters:
-  - file: 02_temperature/02_temperature.ipynb
-    title: "It's getting hot(ter) in here"
+  - file: 02_temperature/02a_temperature.ipynb
+    title: "Part I"
+  - file: 02_temperature/02b_temperature.ipynb
+    title: "Part II"
+  - file: 02_temperature/02c_temperature.ipynb
+    title: "Part III"
 
 - caption: "3 | Journey to the Frozen Sea"
   chapters:
