@@ -30,9 +30,7 @@ parts:
   - file: 04_sea_level/04_sea_level.ipynb
     title: "Rising Seas"
 
-  #  - file: 04_sea_level.ipynb
-  #    title: "Chapter 4: Rising seas"
-  #  - file: 05_animations.ipynb
-  #    title: "Chapter 5: Ta panta rhei... (everything flows)"
-    #   - file: 06_greenhouse_gases
-    #     title: Connecting the dots
+- caption: "5 | Ta Panta Rhei... (Everything Flows)"
+  chapters:
+  - file: 05_animations/05_animations
+    title: "Rising Seas"
