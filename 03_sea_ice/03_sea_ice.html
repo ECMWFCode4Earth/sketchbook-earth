@@ -371,12 +371,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-in-polar-sea-ice">Tracking Changes in Polar Sea Ice</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-datasets">Overview Datasets</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-datasets">Overview Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-set-up">Getting Set Up</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-type">Sea Ice Type</a></li>
@@ -393,15 +391,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-3-journey-to-the-frozen-sea">
 <h1>Chapter 3: Journey to the Frozen Sea<a class="headerlink" href="#chapter-3-journey-to-the-frozen-sea" title="Permalink to this heading">#</a></h1>
-<section id="tracking-changes-in-polar-sea-ice">
-<h2>Tracking Changes in Polar Sea Ice<a class="headerlink" href="#tracking-changes-in-polar-sea-ice" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-success">
 <b>Objective</b> <br>
     Reproduce figures from the C3S Climate Intelligence reports about sea ice. Specifically, we will reproduce figures from Sea ice section of the the <a href="https://climate.copernicus.eu/climate-bulletins">Monthly Climate Bulletins</a> and <a href="https://climate.copernicus.eu/climate-indicators/sea-ice">Climate Indicators</a>.
  </a>
 </div>
 <section id="background">
-<h3>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h3>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p>EUMETSAT is the European Organisation for the Exploitation of Meteorological Satellites. It’s a global operational satellite agency at the heart of Europe that provides data, products, and support to a wide range of users in Europe and across the world.</p>
 <p>The OSI SAF, or Ocean and Sea Ice Satellite Application Facility, is one of the specialized Satellite Application Facilities (SAFs) under EUMETSAT. The SAFs are dedicated centers of excellence for processing satellite data, and they focus on various thematic areas. OSI SAF, as its name suggests, concentrates on delivering operational products and services related to ocean and <a class="reference external" href="https://osi-saf.eumetsat.int/products/sea-ice-products">sea ice</a>.</p>
 <p>In this tutorial we will work with different characteristics of global sea ice, specifically we will look at</p>
@@ -414,7 +410,7 @@ document.write(`
 <p>Most of the datasets are provided by the <a class="reference external" href="https://thredds.met.no/thredds/osisaf/osisaf.html">MET Norway Thredds Service</a> of the Norwegian Meteorological Institute except of the sea ice edge and type which is available only through the Climate Data Store (CDS). Whenever possible, we will access the data through the CDS. However, we also show how to obtain the data set directly from the official data provider in the case of sea ice extent.</p>
 </section>
 <section id="overview-datasets">
-<h3>Overview Datasets<a class="headerlink" href="#overview-datasets" title="Permalink to this heading">#</a></h3>
+<h2>Overview Datasets<a class="headerlink" href="#overview-datasets" title="Permalink to this heading">#</a></h2>
 <p>Throughout the notebook we will use the following datasets:</p>
 <table class="table">
 <thead>
@@ -459,6 +455,9 @@ td, th {
         <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
   </tr>
 </table><hr class="docutils" />
+</section>
+<section id="import-packages">
+<h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -489,6 +488,9 @@ td, th {
 </div>
 </div>
 </div>
+</section>
+<section id="getting-set-up">
+<h2>Getting Set Up<a class="headerlink" href="#getting-set-up" title="Permalink to this heading">#</a></h2>
 <p>Set the reference period that defines the climatology of our records. Note that the format here is slightly different to the other notebooks so far. This is because we will rearrange the data into slightly different forms to facilitate the analysis and final visualisations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -497,9 +499,6 @@ td, th {
 </div>
 </div>
 </div>
-</section>
-<section id="downloading-the-data">
-<h3>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path_to</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># dictionary containing [&lt;variable&gt; : &lt;target folder&gt;]</span>
@@ -524,7 +523,6 @@ sea_ice_type    --&gt; data/type/
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="sea-ice-extent">
 <h2>Sea Ice Extent<a class="headerlink" href="#sea-ice-extent" title="Permalink to this heading">#</a></h2>
@@ -8295,12 +8293,10 @@ Data variables:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-in-polar-sea-ice">Tracking Changes in Polar Sea Ice</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-datasets">Overview Datasets</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-datasets">Overview Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-packages">Import Packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-set-up">Getting Set Up</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-extent">Sea Ice Extent</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-concentration">Sea Ice Concentration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sea-ice-type">Sea Ice Type</a></li>
