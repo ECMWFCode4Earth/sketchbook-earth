@@ -406,7 +406,10 @@ document.write(`
 <li><p>Mask the data and use spatiotemporal subsets for plotting.</p></li>
 <li><p>View time series and analyse trends.</p></li>
 </ol>
-<style>
+<div class="alert alert-block alert-warning">
+<p><b>NOTE</b>: <br>
+A big chunk of this notebook is overlapping with the first part of this chapter. This was selected so that this part can run independatly by any user, without the need to previosly run the former part.</p>
+</div><style>
 td, th {
    border: 1px solid white;
    border-collapse: collapse;
@@ -423,10 +426,7 @@ td, th {
         <img src = "https://colab.research.google.com/assets/colab-badge.svg" alt = "Colab"></th>
   </tr>
 </table><hr class="docutils" />
-<div class="alert alert-block alert-warning">
-<p><b>NOTE</b>: <br>
-A big chunk of this notebook is overlapping with the first part of this chapter. This was selected so that this part can run independatly by any user, without the need to previosly run the former part.</p>
-</div></section>
+</section>
 <section id="section-1-install-import-the-necessary-packages">
 <h2>Section 1. Install &amp; import the necessary packages.<a class="headerlink" href="#section-1-install-import-the-necessary-packages" title="Permalink to this heading">#</a></h2>
 <p>The first step for being able to analyse and plot the data is to download and import the necessary libraries for this tutorial. In the GitHub repository you can find the full environment that has all the libraries needed for this and the other tutorials. The environment can be installed in Linux with the simple command: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>. This would be the best option if you use this and the rest tutorials on your local computer. If you are using this tutorial in Google Colab most of the required libraries are already preinstalled in the environment and there are only few libraries that should be downloaded.</p>
