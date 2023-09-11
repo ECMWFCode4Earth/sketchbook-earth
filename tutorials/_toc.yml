@@ -4,10 +4,12 @@
 format: jb-book
 root: intro
 parts:
-- caption: "1 | Greenhouse Gases - The Prime Suspect"
+- caption: "Sketchbook Earth"
   chapters:
-  - file: how_to_run_notebooks
-    title: "How to Run the Notebooks"
+  - file: intro.md
+    title: "Welcome"
+  - file: how_to_run_notebooks.md
+    title: "How to Execute the Notebooks"
 
 
 - caption: "1 | Greenhouse Gases - The Prime Suspect"
