@@ -2,11 +2,10 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
 parts:
 - caption: "Sketchbook Earth"
   chapters:
-  - file: intro.md
+  - root: intro
     title: "Welcome"
   - file: how_to_run_notebooks.md
     title: "How to Execute the Notebooks"
