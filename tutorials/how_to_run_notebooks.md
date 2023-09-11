@@ -18,12 +18,25 @@ Each notebook features a dedicated Google Colab button. However, it won't automa
 
 For example, the following modules are not available in Google Colab but can be installed via:
 
-```bash
-!pip install shapely cartopy --no-binary shapely --no-binary cartopy --force # more info at https://github.com/SciTools/cartopy/issues/1490
+```{dropdown} cdsapi
 !pip install cdsapi
+```
+
+```{dropdown} cdsapi
+See this [cartopy issue](https://github.com/SciTools/cartopy/issues/1490) for more info.
+```bash
+!pip install shapely cartopy --no-binary shapely --no-binary cartopy --force
+```
+```
+
+```{dropdown} xeofs
 !pip install xeofs
+```
+
+```{dropdown} tqdm
 !pip install tqdm
 ```
+
 
 ### Local Machine
 To run the notebooks on your computer:
