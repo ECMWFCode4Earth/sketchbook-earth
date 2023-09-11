@@ -42,3 +42,9 @@ parts:
   chapters:
   - file: 05_animations/05_animations
     title: "Animations & Interactive Plots"
+
+- caption: "6 | ENSO, NAO & more"
+  chapters:
+  - file: 06_climate_oscillations/06_climate_oscillations
+    title: "Climate Oscillations"
+
