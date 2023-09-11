@@ -2,14 +2,11 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-parts:
-- caption: "Sketchbook Earth"
-  chapters:
-  - root: intro
-    title: "Welcome"
-  - file: how_to_run_notebooks.md
-    title: "How to Execute the Notebooks"
+root: intro
 
+parts:
+- file: how_to_run_notebooks.md
+  title: "How to Execute the Notebooks"
 
 - caption: "1 | Greenhouse Gases - The Prime Suspect"
   chapters:
