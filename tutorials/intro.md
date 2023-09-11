@@ -13,6 +13,18 @@ Through Sketchbook Earth, we aim to offer a more visual, comprehensible, and rep
 
 This project was part of the [Code for Climate 2023](https://codeforearth.ecmwf.int/).
 
+### How to Run the Notebooks
+
+You can run the notebooks in three different ways:
+
+1. Binder
+2. Google Colab
+3. Locally on your machine
+
+
+
+
+The first step for being able to analyse and plot the data is to download and install the necessary libraries for this tutorial. In the GitHub repository you can find the full environment that has all the libraries needed for this and the other tutorials. The environment can be installed in Linux with the simple command: conda env create -f environment.yml. This would be the best option if you use this and the rest tutorials on your local computer. If you are using this tutorial in Google Colab most of the required libraries are already preinstalled in the environment and there are only few libraries that should be downloaded.
 
 ### Contents
 Please browse through the tutorials listed below, or make use of the search function to look for specific topics or data processing workflows of interest.
