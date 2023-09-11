@@ -6,6 +6,12 @@ root: intro
 parts:
 - caption: "1 | Greenhouse Gases - The Prime Suspect"
   chapters:
+  - file: how_to_run_notebooks
+    title: "How to Run the Notebooks"
+
+
+- caption: "1 | Greenhouse Gases - The Prime Suspect"
+  chapters:
   - file: 01_greenhouse_gases/01a_greenhouse_gases
     title: "Long-Term Development of CO2 and CH4 Concentrations"
   - file: 01_greenhouse_gases/01b_greenhouse_gases
