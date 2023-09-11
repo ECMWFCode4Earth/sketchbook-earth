@@ -6338,7 +6338,7 @@ flag 3: Closed ice (more than 70% ice concentration)</dd><dt><span>ancillary_var
 <p>Our next move is to determine the median sea ice edge for each grid cell. The outcome is compact enough for memory storage, hence we’ll compute it directly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_ice_edge</span> <span class="o">=</span> <span class="n">is_ice</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median_ice_edge</span> <span class="o">=</span> <span class="n">is_ice</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">ProgressBar</span><span class="p">():</span>
     <span class="n">median_ice_edge</span> <span class="o">=</span> <span class="n">median_ice_edge</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
@@ -6346,14 +6346,7 @@ flag 3: Closed ice (more than 70% ice concentration)</dd><dt><span>ancillary_var
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[###################################     ] | 88% Completed | 97.69 ss
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/nrieger/miniconda3/envs/tutorial/lib/python3.10/site-packages/numpy/lib/nanfunctions.py:1217: RuntimeWarning: All-NaN slice encountered
-  return function_base._ureduce(a, func=_nanmedian, keepdims=keepdims,
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[########################################] | 100% Completed | 177.88 s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[########################################] | 100% Completed | 102.16 s
 </pre></div>
 </div>
 </div>
@@ -6404,7 +6397,7 @@ flag 3: Closed ice (more than 70% ice concentration)</dd><dt><span>ancillary_var
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/035df86aa23762c19cab31418fda3a08964228aef91bd367546e7d0bfa50b6c7.png" src="../_images/035df86aa23762c19cab31418fda3a08964228aef91bd367546e7d0bfa50b6c7.png" />
+<img alt="../_images/610fb27426747b5eae2cd54f8e944da1ddf0033e444adb82c98c522855d9c35c.png" src="../_images/610fb27426747b5eae2cd54f8e944da1ddf0033e444adb82c98c522855d9c35c.png" />
 </div>
 </div>
 </section>
