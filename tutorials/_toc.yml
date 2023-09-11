@@ -3,7 +3,15 @@
 
 format: jb-book
 root: intro
+
+
 parts:
+
+- caption: "Getting Set Up"
+  chapters:
+  - file: how_to_run_notebooks.md
+    title: "How to Execute the Notebooks"
+
 - caption: "1 | Greenhouse Gases - The Prime Suspect"
   chapters:
   - file: 01_greenhouse_gases/01a_greenhouse_gases
