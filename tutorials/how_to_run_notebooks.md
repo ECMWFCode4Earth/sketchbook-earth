@@ -49,7 +49,7 @@ To run the notebooks on your computer:
 git clone https://github.com/ECMWFCode4Earth/sketchbook-earth.git
 ```
 
-** 2. Navigate to the Repository and Install the Python Modules**
+**2. Navigate to the Repository and Install the Python Modules**
 
 This is best done using `conda`:
 
