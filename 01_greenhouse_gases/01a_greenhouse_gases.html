@@ -424,7 +424,10 @@ document.write(`
 <li><p>View time series and analyse trends.</p></li>
 <li><p>Create gridded plots and analyse spatial variations.</p></li>
 </ol>
-<style>
+<div class="alert alert-block alert-info">    
+<b>NOTE</b>:
+Before interacting with the following notebook, please ensure you've reviewed the <a href="https://ecmwfcode4earth.github.io/sketchbook-earth/how_to_run_notebooks.html">How to Execute the Notebooks</a> section.
+</div><style>
 td, th {
    border: 1px solid white;
    border-collapse: collapse;
@@ -445,22 +448,7 @@ td, th {
 </section>
 <section id="section-1-install-import-the-necessary-packages">
 <h2>Section 1. Install &amp; import the necessary packages.<a class="headerlink" href="#section-1-install-import-the-necessary-packages" title="Permalink to this heading">#</a></h2>
-<p>The first step for being able to analyse and plot the data is to download and import the necessary libraries for this tutorial. In the GitHub repository you can find the full environment that has all the libraries needed for this and the other tutorials. The environment can be installed in Linux with the simple command: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code>. This would be the best option if you use this and the rest tutorials on your local computer. If you are using this tutorial in Google Colab most of the required libraries are already preinstalled in the environment and there are only few libraries that should be downloaded.</p>
-<div class="alert alert-block alert-warning">
-<p><b>NOTE</b>: <br>
-After you execute the below cell you might be prompted by Google Colab to “Restart the Runtime”. If this happens, please restart the runtime and move on the next cell.</p>
-</div><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># download libraries not available in the default Google Colab environment</span>
-<span class="o">%</span><span class="k">pip</span> install cdsapi
-
-<span class="c1"># need some extra arguments for installing cartopy otherwise some features of this library break the script if it is run in Google Colab </span>
-<span class="o">%</span><span class="k">pip</span> install shapely cartopy --no-binary shapely --no-binary cartopy --force # more info at https://github.com/SciTools/cartopy/issues/1490
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let’s now import all the required libraries in our environment. We categorized the libraries based on that they are used for: general libraries, libraries for data analysis, and plotting libraries.</p>
+<p>The first step for being able to analyse and plot the data is to download and import the necessary libraries for this tutorial. We categorized the libraries based on that they are used for: general libraries, libraries for data analysis, and plotting libraries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># General libraries</span>
