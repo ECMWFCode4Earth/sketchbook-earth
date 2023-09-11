@@ -22,11 +22,13 @@ For example, the following modules are not available in Google Colab but can be 
 !pip install cdsapi
 ```
 
-```{dropdown} cdsapi
+```{dropdown} cartopy
 See this [cartopy issue](https://github.com/SciTools/cartopy/issues/1490) for more info.
+
 ```bash
 !pip install shapely cartopy --no-binary shapely --no-binary cartopy --force
 ```
+
 ```
 
 ```{dropdown} xeofs
