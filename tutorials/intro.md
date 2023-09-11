@@ -13,6 +13,8 @@ Through Sketchbook Earth, we aim to offer a more visual, comprehensible, and rep
 
 This project was part of the [Code for Climate 2023](https://codeforearth.ecmwf.int/).
 
+# Hey!
+## Another section
 ### How to Run the Notebooks
 
 You can run the notebooks in three different ways:
