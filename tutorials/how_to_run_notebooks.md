@@ -29,7 +29,6 @@ See this [cartopy issue](https://github.com/SciTools/cartopy/issues/1490) for mo
 !pip install shapely cartopy --no-binary shapely --no-binary cartopy --force
 ```
 
-```
 
 ```{dropdown} xeofs
 !pip install xeofs
