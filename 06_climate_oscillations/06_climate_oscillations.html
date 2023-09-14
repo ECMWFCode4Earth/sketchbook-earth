@@ -386,12 +386,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teleconnections">Teleconnections</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#north-atlantic-oscillation-nao">North Atlantic Oscillation (NAO)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nao-index">NAO Index</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-daily-anomalies">Computing Daily Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-the-nao-index">Deriving the NAO Index</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-the-nao-index">Deriving the NAO Index</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
             </nav>
@@ -482,7 +482,7 @@ td, th {
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dask.config.set at 0x7f3ce4499750&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dask.config.set at 0x7f9851296ce0&gt;
 </pre></div>
 </div>
 </div>
@@ -559,7 +559,7 @@ Enter your CDS API key in the cell below.</p>
    The upcoming cell will download approximately 4 GB. Ensure you have sufficient storage space. Depending on your internet speed, this could take several hours.
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">URL</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">KEY</span><span class="p">)</span>
 
 <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
   <span class="s1">&#39;reanalysis-era5-single-levels-monthly-means&#39;</span><span class="p">,</span>
@@ -573,124 +573,6 @@ Enter your CDS API key in the cell below.</p>
   <span class="p">},</span>
   <span class="n">path_to</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
 <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-09-14 11:53:22,648 INFO Welcome to the CDS
-2023-09-14 11:53:22,651 INFO Sending request to https://cds.climate.copernicus.eu/api/v2/resources/reanalysis-era5-single-levels-monthly-means
-2023-09-14 11:53:23,017 INFO Request is completed
-2023-09-14 11:53:23,018 INFO Downloading https://download-0013-clone.copernicus-climate.eu/cache-compute-0013/cache/data1/adaptor.mars.internal-1694453533.3826513-9338-5-6738052d-b422-49f6-9953-36ae2d000357.nc to data/temp/era5_temp.nc (3.9G)
-                                                      
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">nrieger</span><span class="o">/</span><span class="n">Projects</span><span class="o">/</span><span class="n">sketchbook</span><span class="o">-</span><span class="n">earth</span><span class="o">/</span><span class="n">tutorials</span><span class="o">/</span><span class="mi">06</span><span class="n">_climate_oscillations</span><span class="o">/</span><span class="mi">06</span><span class="n">_climate_oscillations</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">Cell</span> <span class="mi">17</span> <span class="n">line</span> <span class="mi">3</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=0&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">cdsapi</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
-<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=2&#39;</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=3&#39;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>   <span class="s1">&#39;reanalysis-era5-single-levels-monthly-means&#39;</span><span class="p">,</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=4&#39;</span><span class="o">&gt;</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>   <span class="p">{</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=5&#39;</span><span class="o">&gt;</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;format&#39;</span><span class="p">:</span> <span class="s1">&#39;netcdf&#39;</span><span class="p">,</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=6&#39;</span><span class="o">&gt;</span><span class="mi">7</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;product_type&#39;</span><span class="p">:</span> <span class="s1">&#39;monthly_averaged_reanalysis&#39;</span><span class="p">,</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=7&#39;</span><span class="o">&gt;</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;variable&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2m_temperature&#39;</span><span class="p">,</span> <span class="s1">&#39;sea_surface_temperature&#39;</span><span class="p">],</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=8&#39;</span><span class="o">&gt;</span><span class="mi">9</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;year&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1940</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)),</span>
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=9&#39;</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;month&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)),</span>
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=10&#39;</span><span class="o">&gt;</span><span class="mi">11</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>     <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;00:00&#39;</span><span class="p">,</span>
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=11&#39;</span><span class="o">&gt;</span><span class="mi">12</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>   <span class="p">},</span>
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=12&#39;</span><span class="o">&gt;</span><span class="mi">13</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>   <span class="n">path_to</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
-     <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/home/nrieger/Projects/sketchbook-earth/tutorials/06_climate_oscillations/06_climate_oscillations.ipynb#X21sZmlsZQ%3D%3D?line=13&#39;</span><span class="o">&gt;</span><span class="mi">14</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/cdsapi/api.py:366,</span> in <span class="ni">Client.retrieve</span><span class="nt">(self, name, request, target)</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">/resources/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> <span class="n">request</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span> <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">366</span>     <span class="n">result</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">367</span> <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/cdsapi/api.py:171,</span> in <span class="ni">Result.download</span><span class="nt">(self, target)</span>
-<span class="g g-Whitespace">    </span><span class="mi">170</span> <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">171</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_download</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">location</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_length</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/cdsapi/api.py:131,</span> in <span class="ni">Result._download</span><span class="nt">(self, url, size, target)</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">130</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">131</span>     <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span>         <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span>             <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/requests/models.py:816,</span> in <span class="ni">Response.iter_content.&lt;locals&gt;.generate</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">814</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="p">,</span> <span class="s2">&quot;stream&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">815</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">816</span>         <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">chunk_size</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span>     <span class="k">except</span> <span class="n">ProtocolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span>         <span class="k">raise</span> <span class="n">ChunkedEncodingError</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/urllib3/response.py:940,</span> in <span class="ni">HTTPResponse.stream</span><span class="nt">(self, amt, decode_content)</span>
-<span class="g g-Whitespace">    </span><span class="mi">938</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">939</span>     <span class="k">while</span> <span class="ow">not</span> <span class="n">is_fp_closed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">940</span>         <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="o">=</span><span class="n">amt</span><span class="p">,</span> <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">942</span>         <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">943</span>             <span class="k">yield</span> <span class="n">data</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/urllib3/response.py:879,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt, decode_content, cache_content)</span>
-<span class="g g-Whitespace">    </span><span class="mi">876</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">amt</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">877</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decoded_buffer</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">879</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_raw_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">881</span> <span class="n">flush_decoder</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">882</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/urllib3/response.py:814,</span> in <span class="ni">HTTPResponse._raw_read</span><span class="nt">(self, amt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">811</span> <span class="n">fp_closed</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="p">,</span> <span class="s2">&quot;closed&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">813</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_catcher</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">814</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_closed</span> <span class="k">else</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">815</span>     <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">816</span>         <span class="c1"># Platform-specific: Buggy versions of Python.</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span>         <span class="c1"># Close the connection when no data is returned</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">822</span>         <span class="c1"># not properly close the connection in all cases. There is</span>
-<span class="g g-Whitespace">    </span><span class="mi">823</span>         <span class="c1"># no harm in redundantly calling close.</span>
-<span class="g g-Whitespace">    </span><span class="mi">824</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/site-packages/urllib3/response.py:799,</span> in <span class="ni">HTTPResponse._fp_read</span><span class="nt">(self, amt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="k">return</span> <span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="c1"># StringIO doesn&#39;t like amt=None</span>
-<span class="ne">--&gt; </span><span class="mi">799</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/http/client.py:466,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">amt</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="c1"># clip the read to the &quot;end of response&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span>     <span class="n">amt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
-<span class="ne">--&gt; </span><span class="mi">466</span> <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">and</span> <span class="n">amt</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span>     <span class="c1"># Ideally, we would raise IncompleteRead if the content-length</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span>     <span class="c1"># wasn&#39;t satisfied, but it might break compatibility.</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/socket.py:705,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">705</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/ssl.py:1274,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1270</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1271</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1272</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1274</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1275</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1276</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/tutorial/lib/python3.10/ssl.py:1130,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1128</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1129</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1130</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1131</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -2494,8 +2376,8 @@ Coordinates:
 </div>
 </section>
 </section>
-<section id="north-atlantic-oscillation-nao">
-<h2>North Atlantic Oscillation (NAO)<a class="headerlink" href="#north-atlantic-oscillation-nao" title="Permalink to this heading">#</a></h2>
+<section id="nao-index">
+<h2>NAO Index<a class="headerlink" href="#nao-index" title="Permalink to this heading">#</a></h2>
 <p>The North Atlantic Oscillation (NAO) is a significant fluctuation in atmospheric pressure between the subtropical high-pressure system near the Azores in the Atlantic Ocean and the sub-polar low-pressure system near Iceland. It’s a pivotal determinant of winter climate patterns in Europe. The NAO quantifies the strength of the westerly winds over the North Atlantic. While numerous ways exist to define the NAO index, the variations between them are generally slight.</p>
 <p>In this section, we’ll adopt the definition found in the <a class="reference external" href="https://climate.copernicus.eu/esotc/2022/about-data#NorthAtlanticOscillationIndex">ESOTC 2022</a>.</p>
 <p>Succinctly, the NAO index is computed as follows:</p>
@@ -2503,7 +2385,10 @@ Coordinates:
 <li><p>Empirical Orthogonal Function (EOF) analysis is conducted on daily area-weighted 500 hPa geopotential height (Z500) anomalies from the ERA5 reanalysis covering the Euro-Atlantic region (30°N to 88.5°N, 80°W to 40°E) from 1980–2008. Only data from October–April are utilised in this phase. The NAO pattern is characterised by the first mode derived from this EOF analysis.</p></li>
 <li><p>A daily NAO index time series is then produced by projecting the daily Z500 anomalies from ERA5 onto the NAO pattern established in the first step. This series is subsequently standardised using its standard deviation from 1991–2020. Notably, the daily anomalies deployed in the second step are deduced from the daily climatology spanning 1991–2020.</p></li>
 </ol>
-<section id="downloading-the-data">
+<div class="alert alert-block alert-info">
+<b>Info</b>: <br>
+   For ESOTC 2022, the ERA-Interim dataset is used instead of ERA5.
+</div><section id="downloading-the-data">
 <h3>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this heading">#</a></h3>
 <p>To suppress the output, we instantiate a new <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> Client.</p>
 <div class="cell docutils container">
@@ -3639,9 +3524,8 @@ Attributes:
 </div>
 </div>
 </section>
-</section>
 <section id="deriving-the-nao-index">
-<h2>Deriving the NAO Index<a class="headerlink" href="#deriving-the-nao-index" title="Permalink to this heading">#</a></h2>
+<h3>Deriving the NAO Index<a class="headerlink" href="#deriving-the-nao-index" title="Permalink to this heading">#</a></h3>
 <p>As previously outlined, the NAO index is based on the first EOF mode of daily Z500 anomalies from October through April, spanning 1980 to 2008. First, we select this specific time period.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4323,6 +4207,7 @@ Coordinates:
 </div>
 </div>
 </section>
+</section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>This tutorial illuminated the process of extracting both the ENSO and NAO indices from ERA5 data. We also touched upon the methodology of investigating teleconnections, demonstrated with an surface temperature teleconnections of ENSO.</p>
@@ -4395,12 +4280,12 @@ Coordinates:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teleconnections">Teleconnections</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#north-atlantic-oscillation-nao">North Atlantic Oscillation (NAO)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nao-index">NAO Index</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-data">Downloading the Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-daily-anomalies">Computing Daily Anomalies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-the-nao-index">Deriving the NAO Index</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-the-nao-index">Deriving the NAO Index</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
