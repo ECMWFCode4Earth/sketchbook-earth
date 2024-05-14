@@ -1,3 +1,5 @@
+# The Sketchbook Earth Jupyter Book is available [here](https://ecmwfcode4earth.github.io/sketchbook-earth/intro.html).
+
 # Getting started
 
 ```
